@@ -63,10 +63,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Creates a palette file for GitHub language colours.",
                                      epilog="Mark Embling (markembling.info)")
     parser.add_argument("output", help="output filename")
-    parser.add_argument("--format", help="palette format", 
+    parser.add_argument("--format", help="palette format (default: ccxml)", 
                                     default="ccxml",
                                     choices=["ccxml", "gpl"])
-    parser.add_argument("--url", help="URL for source YAML", 
+    parser.add_argument("--url", help="URL for source YAML (default: URL for raw linguist file on GitHub)", 
                                  default="https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml")
     args = parser.parse_args()
 
