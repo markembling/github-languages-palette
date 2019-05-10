@@ -10,6 +10,7 @@ The palette files can be found in the `palettes` directory in the following form
 
  - [Colour Chooser][cc] palette file (`.ccxml`)
  - ~~[GIMP](https://www.gimp.org/) palette (`.gpl`)~~ **THIS HAS NOT YET BEEN IMPLEMENTED**
+ - JSON file (`.json`)
  - *More to be added...*
 
 ## Python Script

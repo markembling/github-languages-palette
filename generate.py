@@ -3,6 +3,7 @@ import requests
 import yaml
 from colour import Color
 import xml.etree.ElementTree as ET
+import json
 
 class CcxmlGenerator:
     PALETTE_XML_NS = "http://markembling.info/xmlschema/colourchooser/palette/1"
@@ -47,12 +48,20 @@ class GplGenerator:
         raise NotImplementedError
 
 
+class JsonGenerator:
+    def generate_file(self, colors, path):
+        with open(path, "w") as f:
+            json.dump({name: col.hex for name, col in colors.items()}, f, indent=4)
+
+
 def generator_for_format(format):
     """Return the appropriate generator class for the given format"""
     if format == "ccxml":
         return CcxmlGenerator()
     if format == "gpl":
         return GplGenerator()
+    if format == "json":
+        return JsonGenerator()
     return None
 
 def data_to_color_dict(data):
@@ -65,7 +74,7 @@ if __name__ == "__main__":
     parser.add_argument("output", help="output filename")
     parser.add_argument("--format", help="palette format (default: ccxml)", 
                                     default="ccxml",
-                                    choices=["ccxml", "gpl"])
+                                    choices=["ccxml", "gpl", "json"])
     parser.add_argument("--url", help="URL for source YAML (default: URL for raw linguist file on GitHub)", 
                                  default="https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml")
     args = parser.parse_args()
