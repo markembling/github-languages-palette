@@ -18,12 +18,13 @@ The Python script is what grabs the list from GitHub and generates the palette f
 
 If you want to run the script, you will first need to:
 
- 1. (Optional) Create a [virtual environment](https://docs.python.org/3.7/tutorial/venv.html) and activate it. I'd recommend this so the required packages are not installed system-wide.  
+ 1. Have a recent version of Python 3 installed (>= 3.6).
+ 2. (Optional) Create a [virtual environment](https://docs.python.org/3.7/tutorial/venv.html) and activate it. I'd recommend this so the required packages are not installed system-wide.  
     
         python3 -m venv venv
         . venv/bin/activate
 
- 2. Install the required packages using `pip`.  
+ 3. Install the required packages using `pip`.  
     
         pip install -r requirements.txt
 

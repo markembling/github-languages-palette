@@ -44,7 +44,7 @@ class CcxmlGenerator:
 
 class GplGenerator:
     def generate_file(self, colors, path):
-        print("NOT YET IMPLEMENTED")
+        raise NotImplementedError
 
 
 def generator_for_format(format):
@@ -76,3 +76,4 @@ if __name__ == "__main__":
 
     generator = generator_for_format(args.format)
     generator.generate_file(color_dict, args.output)
+    print(f"Created {args.output}")
