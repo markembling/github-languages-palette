@@ -45,7 +45,15 @@ class CcxmlGenerator:
 
 class GplGenerator:
     def generate_file(self, colors, path):
-        raise NotImplementedError
+        with open(path, "w", newline="\n") as f:
+            f.write("GIMP Palette\n")
+            f.write("# See https://github.com/markembling/github-languages-palette\n")
+            for name, col in colors.items():
+                rgb = tuple(int(c * 255) for c in  col.rgb)
+                f.write(f"{self._pad_number(rgb[0])} {self._pad_number(rgb[1])} {self._pad_number(rgb[2])} {name}\n")
+
+    def _pad_number(self, num):
+        return str(num).rjust(3)
 
 
 class JsonGenerator:
