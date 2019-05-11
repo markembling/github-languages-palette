@@ -43,7 +43,6 @@ class CcxmlGenerator:
 
         return el_colour
 
-
 class GplGenerator:
     def generate_file(self, colors, path):
         with open(path, "w", newline="\n") as f:
@@ -55,7 +54,6 @@ class GplGenerator:
 
     def _pad_number(self, num):
         return str(num).rjust(3)
-
 
 class AseGenerator:
     def generate_file(self, colors, path):
@@ -106,7 +104,6 @@ class AseGenerator:
 
         return b
 
-
 class AcoGenerator:
     def generate_file(self, colors, path):
         with open(path, "wb") as f:
@@ -141,12 +138,10 @@ class AcoGenerator:
         file.write(name.encode('utf-16-be'))
         file.write(b'\x00\x00')
 
-
 class JsonGenerator:
     def generate_file(self, colors, path):
         with open(path, "w") as f:
             json.dump({name: col.hex for name, col in colors.items()}, f, indent=4)
-
 
 class CsvGenerator:
     def generate_file(self, colors, path):
