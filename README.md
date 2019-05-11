@@ -6,7 +6,7 @@ This was inspired by [doda/github-language-colors](https://github.com/doda/githu
 
 ## Palettes
 
-The palette files can be found in the `palettes` directory in the following formats. If you're after the colours, this is where you want to go - just grab the file format which you need and use it and you don't need to worry about the Python script.
+The palette files can be found in the [`palettes`](palettes/) directory in the following formats. If you're after the colours, this is where you want to go - just grab the file format which you need and use it and you don't need to worry about the Python script.
 
  - [Colour Chooser][cc] palette file (`.ccxml`)
  - [GIMP](https://www.gimp.org/) palette (`.gpl`)
