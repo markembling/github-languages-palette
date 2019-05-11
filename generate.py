@@ -62,6 +62,15 @@ class JsonGenerator:
             json.dump({name: col.hex for name, col in colors.items()}, f, indent=4)
 
 
+class CsvGenerator:
+    def generate_file(self, colors, path):
+        with open(path, "w", newline="\n") as f:
+            f.write("Language,R,G,B,Hex\n")
+            for name, col in colors.items():
+                row = (name, *tuple(str(int(c * 255)) for c in  col.rgb), col.hex)
+                f.write(",".join(row) + "\n")
+
+
 def generator_for_format(format):
     """Return the appropriate generator class for the given format"""
     if format == "ccxml":
@@ -70,6 +79,8 @@ def generator_for_format(format):
         return GplGenerator()
     if format == "json":
         return JsonGenerator()
+    if format == "csv":
+        return CsvGenerator()
     return None
 
 def data_to_color_dict(data):
@@ -82,7 +93,7 @@ if __name__ == "__main__":
     parser.add_argument("output", help="output filename")
     parser.add_argument("--format", help="palette format (default: ccxml)", 
                                     default="ccxml",
-                                    choices=["ccxml", "gpl", "json"])
+                                    choices=["ccxml", "gpl", "json", "csv"])
     parser.add_argument("--url", help="URL for source YAML (default: URL for raw linguist file on GitHub)", 
                                  default="https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml")
     args = parser.parse_args()
