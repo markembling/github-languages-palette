@@ -103,8 +103,43 @@ class AseGenerator:
 
         # Colour type: 2 = normal
         b += int(2).to_bytes(2, byteorder='big')
-        
+
         return b
+
+
+class AcoGenerator:
+    def generate_file(self, colors, path):
+        with open(path, "wb") as f:
+            self._write_v1_section(f, colors)
+            self._write_v2_section(f, colors)
+    
+    def _write_v1_section(self, file, colors):
+        self._write_header(file, 1, len(colors))
+        for col in colors.values():
+            self._write_color(file, col)
+    
+    def _write_v2_section(self, file, colors):
+        self._write_header(file, 2, len(colors))
+        for name, col in colors.items():
+            self._write_color(file, col)
+            self._write_color_name(file, name)
+    
+    def _write_header(self, file, version, col_count):
+        file.write(struct.pack('>H', version))
+        file.write(struct.pack('>H', col_count))
+    
+    def _write_color(self, file, color):
+        rgb = tuple(int(c * 65535) for c in  color.rgb)
+        file.write(struct.pack('>H', 0))        # Indcates colour is RGB
+        file.write(struct.pack('>H', rgb[0]))   # Red component
+        file.write(struct.pack('>H', rgb[1]))   # Green component
+        file.write(struct.pack('>H', rgb[2]))   # Blue component
+        file.write(struct.pack('>H', 0))        # Colours are 4 values long: pad fourth with zero
+    
+    def _write_color_name(self, file, name):
+        file.write(struct.pack('>I', len(name) + 1))
+        file.write(name.encode('utf-16-be'))
+        file.write(b'\x00\x00')
 
 
 class JsonGenerator:
@@ -130,6 +165,8 @@ def generator_for_format(format):
         return GplGenerator()
     if format == "ase":
         return AseGenerator()
+    if format == "aco":
+        return AcoGenerator()
     if format == "json":
         return JsonGenerator()
     if format == "csv":
@@ -146,7 +183,7 @@ if __name__ == "__main__":
     parser.add_argument("output", help="output filename")
     parser.add_argument("--format", help="palette format (default: ccxml)", 
                                     default="ccxml",
-                                    choices=["ccxml", "gpl", "ase", "json", "csv"])
+                                    choices=["ccxml", "gpl", "ase", "aco", "json", "csv"])
     parser.add_argument("--url", help="URL for source YAML (default: URL for raw linguist file on GitHub)", 
                                  default="https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml")
     args = parser.parse_args()

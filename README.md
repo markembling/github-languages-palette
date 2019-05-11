@@ -11,9 +11,13 @@ The palette files can be found in the `palettes` directory in the following form
  - [Colour Chooser][cc] palette file (`.ccxml`)
  - [GIMP](https://www.gimp.org/) palette (`.gpl`)
  - Adobe Swatch Exchange file (`.ase`)
+ - Adobe Photoshop Color Swatch file (`.aco`)
  - JSON file (`.json`)
  - CSV file (`.csv`)
- - *More to be added...*
+
+ This should cover most cases but if there's a palette format missing that you'd find useful, add an issue and I'll see what I can do when I have time. Alternatively if you'd like to, feel free to contribute a pull request adding the functionality.
+
+ **Note:** I've purposefully not included palette formats which do not include names for each colour - I thought that missed the point somewhat.
 
 ## Python Script
 
