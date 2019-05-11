@@ -10,6 +10,7 @@ The palette files can be found in the `palettes` directory in the following form
 
  - [Colour Chooser][cc] palette file (`.ccxml`)
  - [GIMP](https://www.gimp.org/) palette (`.gpl`)
+ - Adobe Swatch Exchange file (`.ase`)
  - JSON file (`.json`)
  - CSV file (`.csv`)
  - *More to be added...*

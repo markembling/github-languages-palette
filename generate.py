@@ -1,3 +1,4 @@
+import struct
 import argparse
 import requests
 import yaml
@@ -56,6 +57,56 @@ class GplGenerator:
         return str(num).rjust(3)
 
 
+class AseGenerator:
+    def generate_file(self, colors, path):
+        with open(path, "wb") as f:
+            f.write(b'\x41\x53\x45\x46')  # Signature
+            f.write(b'\x00\x01\x00\x00')  # Version
+
+            # Number of blocks (colours + 2)
+            f.write((len(colors) + 2).to_bytes(4, byteorder='big'))
+
+            # Group start block
+            self._write_block(f, b'\xc0\x01', self._get_string_bytes("GitHub Languages"))
+
+            for name, col in colors.items():
+                # Colour block
+                col_bytes = self._get_colour_block_bytes(name, col)
+                self._write_block(f, b'\x00\x01', col_bytes)
+                
+            # Group end block
+            self._write_block(f, b'\xc0\x02', b'')
+    
+    def _write_block(self, file, block_type_bytes, block_content_bytes):
+        file.write(block_type_bytes)
+        file.write(len(block_content_bytes).to_bytes(4, byteorder='big'))
+        file.write(block_content_bytes)
+    
+    def _get_string_bytes(self, strval):
+        b = b''
+        b += (len(strval) + 1).to_bytes(2, byteorder='big')
+        b += strval.encode('utf-16-be')
+        b += b'\x00\x00'
+        return b
+    
+    def _get_colour_block_bytes(self, name, color):
+        rgb = color.rgb
+
+        b = self._get_string_bytes(name)
+
+        # Colour model - RGB
+        b += b'\x52\x47\x42\x20'
+
+        b += struct.pack('>f', rgb[0])
+        b += struct.pack('>f', rgb[1])
+        b += struct.pack('>f', rgb[2])
+
+        # Colour type: 2 = normal
+        b += int(2).to_bytes(2, byteorder='big')
+        
+        return b
+
+
 class JsonGenerator:
     def generate_file(self, colors, path):
         with open(path, "w") as f:
@@ -77,6 +128,8 @@ def generator_for_format(format):
         return CcxmlGenerator()
     if format == "gpl":
         return GplGenerator()
+    if format == "ase":
+        return AseGenerator()
     if format == "json":
         return JsonGenerator()
     if format == "csv":
@@ -93,7 +146,7 @@ if __name__ == "__main__":
     parser.add_argument("output", help="output filename")
     parser.add_argument("--format", help="palette format (default: ccxml)", 
                                     default="ccxml",
-                                    choices=["ccxml", "gpl", "json", "csv"])
+                                    choices=["ccxml", "gpl", "ase", "json", "csv"])
     parser.add_argument("--url", help="URL for source YAML (default: URL for raw linguist file on GitHub)", 
                                  default="https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml")
     args = parser.parse_args()
