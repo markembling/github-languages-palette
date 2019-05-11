@@ -65,5 +65,11 @@ These scripts will create a `palettes` directory if it does not already exist, a
 
     ./generate-all.ps1
 
+## License
+
+The script for generating the palettes is licensed under the [MIT license](LICENSE).
+
+The actual palette of colours is part of GitHub's [Linguist](https://github.com/github/linguist) and therefore usage is dictated by the [license for Linguist](https://github.com/github/linguist/blob/master/LICENSE). At time of writing (May 2019), Linguist was available under the MIT license.
+
 
 [cc]: https://markembling.info/2010/12/colour-chooser
