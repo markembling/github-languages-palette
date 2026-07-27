@@ -1,15 +1,21 @@
-import struct
 import argparse
+import struct
+import json
 import urllib.request
+import xml.etree.ElementTree as ET
+from typing import Protocol, BinaryIO
+
 import yaml
 from colour import Color
-import xml.etree.ElementTree as ET
-import json
+
+
+class PaletteGenerator(Protocol):
+    def generate_file(self, colors: dict[str, Color], path: str) -> None: ...
 
 class CcxmlGenerator:
     PALETTE_XML_NS = "http://markembling.info/xmlschema/colourchooser/palette/1"
 
-    def generate_file(self, colors, path):
+    def generate_file(self, colors: dict[str, Color], path: str) -> None:
         el_palette = ET.Element(self._element_name_namespaced("palette"))
 
         for lang, col in colors.items():
@@ -22,10 +28,10 @@ class CcxmlGenerator:
                          method="xml",
                          default_namespace=self.PALETTE_XML_NS)
 
-    def _element_name_namespaced(self, name):
+    def _element_name_namespaced(self, name: str) -> str:
         return "{{{0}}}{1}".format(self.PALETTE_XML_NS, name)
     
-    def _create_colour_element(self, name, color):
+    def _create_colour_element(self, name: str, color: Color):
         rgb = tuple(int(c * 255) for c in  color.rgb)
 
         el_colour = ET.Element(self._element_name_namespaced("colour"))
@@ -44,7 +50,7 @@ class CcxmlGenerator:
         return el_colour
 
 class GplGenerator:
-    def generate_file(self, colors, path):
+    def generate_file(self, colors: dict[str, Color], path: str) -> None:
         with open(path, "w", newline="\n") as f:
             f.write("GIMP Palette\n")
             f.write("# See https://github.com/markembling/github-languages-palette\n")
@@ -52,11 +58,11 @@ class GplGenerator:
                 rgb = tuple(int(c * 255) for c in  col.rgb)
                 f.write(f"{self._pad_number(rgb[0])} {self._pad_number(rgb[1])} {self._pad_number(rgb[2])} {name}\n")
 
-    def _pad_number(self, num):
+    def _pad_number(self, num: int):
         return str(num).rjust(3)
 
 class AseGenerator:
-    def generate_file(self, colors, path):
+    def generate_file(self, colors: dict[str, Color], path: str) -> None:
         with open(path, "wb") as f:
             f.write(b'\x41\x53\x45\x46')  # Signature
             f.write(b'\x00\x01\x00\x00')  # Version
@@ -75,19 +81,19 @@ class AseGenerator:
             # Group end block
             self._write_block(f, b'\xc0\x02', b'')
     
-    def _write_block(self, file, block_type_bytes, block_content_bytes):
+    def _write_block(self, file: BinaryIO, block_type_bytes: bytes, block_content_bytes: bytes) -> None:
         file.write(block_type_bytes)
         file.write(len(block_content_bytes).to_bytes(4, byteorder='big'))
         file.write(block_content_bytes)
     
-    def _get_string_bytes(self, strval):
+    def _get_string_bytes(self, strval: str) -> bytes:
         b = b''
         b += (len(strval) + 1).to_bytes(2, byteorder='big')
         b += strval.encode('utf-16-be')
         b += b'\x00\x00'
         return b
     
-    def _get_colour_block_bytes(self, name, color):
+    def _get_colour_block_bytes(self, name: str, color: Color) -> bytes:
         rgb = color.rgb
 
         b = self._get_string_bytes(name)
@@ -105,46 +111,46 @@ class AseGenerator:
         return b
 
 class AcoGenerator:
-    def generate_file(self, colors, path):
+    def generate_file(self, colors: dict[str, Color], path: str) -> None:
         with open(path, "wb") as f:
             self._write_v1_section(f, colors)
             self._write_v2_section(f, colors)
     
-    def _write_v1_section(self, file, colors):
+    def _write_v1_section(self, file: BinaryIO, colors: dict[str, Color]) -> None:
         self._write_header(file, 1, len(colors))
         for col in colors.values():
             self._write_color(file, col)
     
-    def _write_v2_section(self, file, colors):
+    def _write_v2_section(self, file: BinaryIO, colors: dict[str, Color]) -> None:
         self._write_header(file, 2, len(colors))
         for name, col in colors.items():
             self._write_color(file, col)
             self._write_color_name(file, name)
     
-    def _write_header(self, file, version, col_count):
+    def _write_header(self, file: BinaryIO, version: int, col_count: int) -> None:
         file.write(struct.pack('>H', version))
         file.write(struct.pack('>H', col_count))
     
-    def _write_color(self, file, color):
+    def _write_color(self, file: BinaryIO, color: Color) -> None:
         rgb = tuple(int(c * 65535) for c in  color.rgb)
-        file.write(struct.pack('>H', 0))        # Indcates colour is RGB
+        file.write(struct.pack('>H', 0))        # Indicates colour is RGB
         file.write(struct.pack('>H', rgb[0]))   # Red component
         file.write(struct.pack('>H', rgb[1]))   # Green component
         file.write(struct.pack('>H', rgb[2]))   # Blue component
         file.write(struct.pack('>H', 0))        # Colours are 4 values long: pad fourth with zero
     
-    def _write_color_name(self, file, name):
+    def _write_color_name(self, file: BinaryIO, name: str) -> None:
         file.write(struct.pack('>I', len(name) + 1))
         file.write(name.encode('utf-16-be'))
         file.write(b'\x00\x00')
 
 class JsonGenerator:
-    def generate_file(self, colors, path):
+    def generate_file(self, colors: dict[str, Color], path: str) -> None:
         with open(path, "w") as f:
             json.dump({name: col.hex for name, col in colors.items()}, f, indent=4)
 
 class CsvGenerator:
-    def generate_file(self, colors, path):
+    def generate_file(self, colors: dict[str, Color], path: str) -> None:
         with open(path, "w", newline="\n") as f:
             f.write("Language,R,G,B,Hex\n")
             for name, col in colors.items():
@@ -152,7 +158,7 @@ class CsvGenerator:
                 f.write(",".join(row) + "\n")
 
 
-def generator_for_format(format):
+def generator_for_format(format: str) -> PaletteGenerator | None:
     """Return the appropriate generator class for the given format"""
     if format == "ccxml":
         return CcxmlGenerator()
@@ -168,9 +174,11 @@ def generator_for_format(format):
         return CsvGenerator()
     return None
 
-def data_to_color_dict(data):
+
+def data_to_color_dict(data) -> dict[str, Color]:
     """Converts the raw deserialised YAML data into a sorted dictionary of colour names and values"""
     return {name: Color(data["color"]) for name, data in sorted(data.items(), key=lambda x: x[0].lower()) if "color" in data}
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Creates a palette file for GitHub language colours.",
@@ -189,5 +197,6 @@ if __name__ == "__main__":
         color_dict = data_to_color_dict(data)
 
         generator = generator_for_format(args.format)
-        generator.generate_file(color_dict, args.output)
-        print(f"Created {args.output}")
+        if generator is not None:
+            generator.generate_file(color_dict, args.output)
+            print(f"Created {args.output}")
