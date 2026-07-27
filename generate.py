@@ -1,6 +1,6 @@
 import struct
 import argparse
-import requests
+import urllib.request
 import yaml
 from colour import Color
 import xml.etree.ElementTree as ET
@@ -183,10 +183,11 @@ if __name__ == "__main__":
                                  default="https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml")
     args = parser.parse_args()
 
-    response = requests.get(args.url)
-    data = yaml.safe_load(response.text)
-    color_dict = data_to_color_dict(data)
+    with urllib.request.urlopen(args.url) as response:
+        raw = response.read()
+        data = yaml.safe_load(raw)
+        color_dict = data_to_color_dict(data)
 
-    generator = generator_for_format(args.format)
-    generator.generate_file(color_dict, args.output)
-    print(f"Created {args.output}")
+        generator = generator_for_format(args.format)
+        generator.generate_file(color_dict, args.output)
+        print(f"Created {args.output}")
