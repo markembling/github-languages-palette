@@ -26,6 +26,7 @@ class CcxmlGenerator:
             el_palette.append(el_colour)
 
         tree = ET.ElementTree(el_palette)
+        ET.indent(tree, space="    ")
         tree.write(path, xml_declaration=True,
                          encoding='utf-8',
                          method="xml",
