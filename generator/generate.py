@@ -3,10 +3,13 @@ import struct
 import json
 import urllib.request
 import xml.etree.ElementTree as ET
-from typing import Protocol, BinaryIO
+from typing import Protocol, BinaryIO, Sequence
 
 import yaml
 from colour import Color
+
+
+LINGUIST_LANGS_URL = "https://raw.githubusercontent.com/github-linguist/linguist/refs/heads/main/lib/linguist/languages.yml"
 
 
 class PaletteGenerator(Protocol):
@@ -180,23 +183,29 @@ def data_to_color_dict(data) -> dict[str, Color]:
     return {name: Color(data["color"]) for name, data in sorted(data.items(), key=lambda x: x[0].lower()) if "color" in data}
 
 
-if __name__ == "__main__":
+def run(argv: Sequence[str]) -> int:
     parser = argparse.ArgumentParser(description="Creates a palette file for GitHub language colours.",
                                      epilog="Mark Embling (markembling.info)")
     parser.add_argument("output", help="output filename")
     parser.add_argument("--format", help="palette format (default: ccxml)", 
                                     default="ccxml",
                                     choices=["ccxml", "gpl", "ase", "aco", "json", "csv"])
-    parser.add_argument("--url", help="URL for source YAML (default: URL for raw linguist file on GitHub)", 
-                                 default="https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml")
-    args = parser.parse_args()
+    parser.add_argument("--url", help="URL for languages YAML (default: URL for languages.yaml file on GitHub)", 
+                                 default=LINGUIST_LANGS_URL)
+    args = parser.parse_args(argv)
 
-    with urllib.request.urlopen(args.url) as response:
-        raw = response.read()
-        data = yaml.safe_load(raw)
-        color_dict = data_to_color_dict(data)
+    try:
+        with urllib.request.urlopen(args.url) as response:
+            raw = response.read()
+            data = yaml.safe_load(raw)
+            color_dict = data_to_color_dict(data)
 
-        generator = generator_for_format(args.format)
-        if generator is not None:
-            generator.generate_file(color_dict, args.output)
-            print(f"Created {args.output}")
+            generator = generator_for_format(args.format)
+            if generator is not None:
+                generator.generate_file(color_dict, args.output)
+                print(f"Created {args.output}")
+    except Exception as e:
+        print(f"Error: {e}")
+        return 1
+
+    return 0
