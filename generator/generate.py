@@ -10,6 +10,7 @@ from colour import Color
 
 
 LINGUIST_LANGS_URL = "https://raw.githubusercontent.com/github-linguist/linguist/refs/heads/main/lib/linguist/languages.yml"
+LINGUIST_POPULAR_URL = "https://raw.githubusercontent.com/github-linguist/linguist/refs/heads/main/lib/linguist/popular.yml"
 
 
 class PaletteGenerator(Protocol):
@@ -184,6 +185,29 @@ def data_to_color_dict(data) -> dict[str, Color]:
     return {name: Color(data["color"]) for name, data in sorted(data.items(), key=lambda x: x[0].lower()) if "color" in data}
 
 
+def get_linguist_language_colours(langs_url: str) -> dict[str, Color]:
+    """Fetches the languages YAML from GitHub and returns a dictionary of colour names and values"""
+    with urllib.request.urlopen(langs_url) as response:
+        raw = response.read()
+        data = yaml.safe_load(raw)
+        return data_to_color_dict(data)
+
+
+def get_linguist_popular_languages(popular_url: str) -> list[str]:
+    """Fetches the popular languages YAML from GitHub and returns a list of language names"""
+    with urllib.request.urlopen(popular_url) as response:
+        raw = response.read()
+        return yaml.safe_load(raw)
+
+
+def order_language_colours(data: dict[str, Color], popular_langs: list[str]) -> dict[str, Color]:
+    """Orders the colours ensuring that the popular languages are at the top of the list"""
+    order_set = set(popular_langs)
+    ordered_keys = [key for key in popular_langs if key in data]
+    remaining_keys = sorted(key for key in data if key not in order_set)
+    return {key: data[key] for key in [*ordered_keys, *remaining_keys]}
+
+
 def run(argv: Sequence[str]) -> int:
     parser = argparse.ArgumentParser(description="Creates a palette file for GitHub language colours.",
                                      epilog="Mark Embling (markembling.info)")
@@ -191,20 +215,20 @@ def run(argv: Sequence[str]) -> int:
     parser.add_argument("--format", help="palette format (default: ccxml)", 
                                     default="ccxml",
                                     choices=["ccxml", "gpl", "ase", "aco", "json", "csv"])
-    parser.add_argument("--url", help="URL for languages YAML (default: URL for languages.yaml file on GitHub)", 
-                                 default=LINGUIST_LANGS_URL)
+    parser.add_argument("--languages-url", help="URL for languages YAML (default: URL for languages.yml file on GitHub)", 
+                                           default=LINGUIST_LANGS_URL)
+    parser.add_argument("--popular-url", help="URL for popular languages YAML (default: URL for popular.yml file on GitHub)", 
+                                         default=LINGUIST_POPULAR_URL)
     args = parser.parse_args(argv)
 
     try:
-        with urllib.request.urlopen(args.url) as response:
-            raw = response.read()
-            data = yaml.safe_load(raw)
-            color_dict = data_to_color_dict(data)
-
-            generator = generator_for_format(args.format)
-            if generator is not None:
-                generator.generate_file(color_dict, args.output)
-                print(f"Created {args.output}")
+        linguist_data = get_linguist_language_colours(args.languages_url)
+        popular_languages = get_linguist_popular_languages(args.popular_url)
+        final_data = order_language_colours(linguist_data, popular_languages)
+        generator = generator_for_format(args.format)
+        if generator is not None:
+            generator.generate_file(final_data, args.output)
+            print(f"Created {args.output}")
     except Exception as e:
         print(f"Error: {e}")
         return 1
