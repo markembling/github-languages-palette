@@ -229,6 +229,8 @@ def run(argv: Sequence[str]) -> int:
         if generator is not None:
             generator.generate_file(final_data, args.output)
             print(f"Created {args.output}")
+        else:
+            raise ValueError(f"Unknown format '{args.format}'")
     except Exception as e:
         print(f"Error: {e}")
         return 1
