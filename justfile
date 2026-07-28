@@ -1,8 +1,8 @@
 # # Generate all palettes
-generate: clean
+generate *args: clean
     mkdir -p palettes
     for FMT in ccxml gpl ase aco json csv; do \
-        .venv/bin/python -m generator --format $FMT palettes/githublangs.$FMT; \
+        .venv/bin/python -m generator --format $FMT palettes/githublangs.$FMT; {{args}} \
     done
 
 # Clean existing palettes
