@@ -46,9 +46,9 @@ def run(argv: Sequence[str]) -> int:
             languages_file=Path(args.languages_file) if args.languages_file else None,
             popular_file=Path(args.popular_file) if args.popular_file else None
         )
-        print(f"Created {Path(args.output)}")
+        print(f"✓ {Path(args.output)}")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"✗ {Path(args.output)}: {e}")
         return 1
 
     return 0
