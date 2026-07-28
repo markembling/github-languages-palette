@@ -192,12 +192,23 @@ def get_linguist_language_colours(langs_url: str) -> dict[str, Color]:
         data = yaml.safe_load(raw)
         return data_to_color_dict(data)
 
+def load_linguist_language_colours(langs_file: str) -> dict[str, Color]:
+    """Loads the languages YAML from a local file and returns a dictionary of colour names and values"""
+    with open(langs_file, "r") as f:
+        data = yaml.safe_load(f)
+        return data_to_color_dict(data)
+
 
 def get_linguist_popular_languages(popular_url: str) -> list[str]:
     """Fetches the popular languages YAML from GitHub and returns a list of language names"""
     with urllib.request.urlopen(popular_url) as response:
         raw = response.read()
         return yaml.safe_load(raw)
+
+def load_linguist_popular_languages(popular_file: str) -> list[str]:
+    """Loads the popular languages YAML from a local file and returns a list of language names"""
+    with open(popular_file, "r") as f:
+        return yaml.safe_load(f)
 
 
 def order_language_colours(data: dict[str, Color], popular_langs: list[str]) -> dict[str, Color]:
@@ -215,16 +226,42 @@ def run(argv: Sequence[str]) -> int:
     parser.add_argument("--format", help="palette format (default: ccxml)", 
                                     default="ccxml",
                                     choices=["ccxml", "gpl", "ase", "aco", "json", "csv"])
-    parser.add_argument("--languages-url", help="URL for languages YAML (default: URL for languages.yml file on GitHub)", 
-                                           default=LINGUIST_LANGS_URL)
-    parser.add_argument("--popular-url", help="URL for popular languages YAML (default: URL for popular.yml file on GitHub)", 
-                                         default=LINGUIST_POPULAR_URL)
+    
+    languages_group = parser.add_mutually_exclusive_group()
+    languages_group.add_argument("--languages-url",
+                                 help="URL for languages YAML (default: URL for languages.yml file on GitHub)", 
+                                 default=LINGUIST_LANGS_URL)
+    languages_group.add_argument("--languages-file",
+                                 help="local file for languages YAML (default: none)",
+                                 default=None)
+    
+    popular_group = parser.add_mutually_exclusive_group()
+    popular_group.add_argument("--popular-url",
+                               help="URL for popular languages YAML (default: URL for popular.yml file on GitHub)",
+                               default=LINGUIST_POPULAR_URL)
+    popular_group.add_argument("--popular-file",
+                               help="local file for popular languages YAML (default: none)",
+                               default=None)
+    
     args = parser.parse_args(argv)
 
     try:
-        linguist_data = get_linguist_language_colours(args.languages_url)
-        popular_languages = get_linguist_popular_languages(args.popular_url)
+        # Load the linguist language colours from file or URL
+        if args.languages_file is not None:
+            linguist_data = load_linguist_language_colours(args.languages_file)
+        else:
+            linguist_data = get_linguist_language_colours(args.languages_url)
+
+        # Load the popular languages list from file or URL
+        if args.popular_file is not None:
+            popular_languages = load_linguist_popular_languages(args.popular_file)
+        else:
+            popular_languages = get_linguist_popular_languages(args.popular_url)
+
+        # Create the final ordered dictionary of colours
         final_data = order_language_colours(linguist_data, popular_languages)
+
+        # Create the appropriate generator and generate the palette file
         generator = generator_for_format(args.format)
         if generator is not None:
             generator.generate_file(final_data, args.output)
