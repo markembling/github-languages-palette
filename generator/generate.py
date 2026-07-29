@@ -15,6 +15,7 @@ def generate_palette(
     format: str,
     languages_url: str,
     popular_url: str,
+    popular_sort: bool = True,
     languages_file: Path | None = None,
     popular_file: Path | None = None,
 ) -> None:
@@ -25,15 +26,16 @@ def generate_palette(
     else:
         linguist_data = get_linguist_language_colours(languages_url)
 
-    # Load the popular languages list from file or URL
-    if popular_file is not None:
-        popular_languages = load_linguist_popular_languages(popular_file)
-    else:
-        popular_languages = get_linguist_popular_languages(popular_url)
 
-    # Create the final ordered dictionary of colours
-    final_data = order_language_colours(linguist_data, popular_languages)
+    # If required, load the popular languages list from file or URL and order
+    # the linguist data accordingly.
+    if popular_sort:
+        if popular_file is not None:
+            popular_languages = load_linguist_popular_languages(popular_file)
+        else:
+            popular_languages = get_linguist_popular_languages(popular_url)
+        linguist_data = order_language_colours(linguist_data, popular_languages)
 
     # Create the appropriate generator and generate the palette file
     generator = generator_for_format(format)
-    generator.generate_file(final_data, output)
+    generator.generate_file(linguist_data, output)

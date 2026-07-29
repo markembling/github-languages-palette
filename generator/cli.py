@@ -29,6 +29,7 @@ def build_parser() -> argparse.ArgumentParser:
     popular_group.add_argument("--popular-file",
                                help="local file for popular languages YAML (default: none)",
                                default=None)
+    parser.add_argument("--no-popular-first", action="store_true", help="prevent ordering with popular languages first")
     
     return parser
 
@@ -43,6 +44,7 @@ def run(argv: Sequence[str]) -> int:
             format=args.format,
             languages_url=args.languages_url,
             popular_url=args.popular_url,
+            popular_sort=not args.no_popular_first,
             languages_file=Path(args.languages_file) if args.languages_file else None,
             popular_file=Path(args.popular_file) if args.popular_file else None
         )
