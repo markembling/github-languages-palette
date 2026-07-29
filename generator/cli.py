@@ -7,7 +7,7 @@ from .generate import generate_palette
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Creates a palette file for GitHub language colours.",
+    parser = argparse.ArgumentParser(description="Palette file generator for Github Linguist language colours.",
                                      epilog="Mark Embling (markembling.info)")
     parser.add_argument("output", help="output filename")
     parser.add_argument("--format", help="palette format (default: ccxml)", 
@@ -16,15 +16,15 @@ def build_parser() -> argparse.ArgumentParser:
     
     languages_group = parser.add_mutually_exclusive_group()
     languages_group.add_argument("--languages-url",
-                                 help="URL for languages YAML (default: URL for languages.yml file on GitHub)", 
+                                 help="URL for languages YAML (default: GitHub URL for latest languages.yml file)", 
                                  default=LINGUIST_LANGS_URL)
     languages_group.add_argument("--languages-file",
                                  help="local file for languages YAML (default: none)",
                                  default=None)
-    
+
     popular_group = parser.add_mutually_exclusive_group()
     popular_group.add_argument("--popular-url",
-                               help="URL for popular languages YAML (default: URL for popular.yml file on GitHub)",
+                               help="URL for popular languages YAML (default: GitHub URL for latest popular.yml file)",
                                default=LINGUIST_POPULAR_URL)
     popular_group.add_argument("--popular-file",
                                help="local file for popular languages YAML (default: none)",
