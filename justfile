@@ -1,7 +1,6 @@
-LINGUIST_LANGS_PATH := "lib/linguist/languages.yml"
-LINGUIST_POPULAR_PATH := "lib/linguist/popular.yml"
 LINGUIST_REPO := "github-linguist/linguist"
-LINGUIST_REPO_MAIN_URL := "https://raw.githubusercontent.com/{{LINGUIST_REPO}}/main"
+LINGUIST_LANGSYAML_PATH := "lib/linguist/languages.yml"
+LINGUIST_POPULARYAML_PATH := "lib/linguist/popular.yml"
 
 # Invoke the generator with no additional args
 run *args:
@@ -11,15 +10,22 @@ run *args:
 all *args: clean
     #!/usr/bin/env bash
     set -euo pipefail
-    just _generate-all "{{LINGUIST_REPO_MAIN_URL}}/{{LINGUIST_LANGS_PATH}}" "{{LINGUIST_REPO_MAIN_URL}}/{{LINGUIST_POPULAR_PATH}}" {{args}}
+    branch="main"
+    output=($(.venv/bin/python scripts/resolve_release_url.py {{LINGUIST_REPO}} \
+        --branch $branch \
+        {{LINGUIST_LANGSYAML_PATH}} {{LINGUIST_POPULARYAML_PATH}}))
+    ref="${output[0]#ref=}"
+    urls=("${output[@]:1}")
+    just _generate-all "${urls[0]}" "${urls[1]}" {{args}}
+    echo -e "$ref\n# branch: $branch" > palettes/UPSTREAM_VERSION
 
 # Generate all palettes pinned to Linguist's latest tagged release
 all-release *args: clean
     #!/usr/bin/env bash
     set -euo pipefail
     output=($(.venv/bin/python scripts/resolve_release_url.py {{LINGUIST_REPO}} \
-        {{LINGUIST_LANGS_PATH}} {{LINGUIST_POPULAR_PATH}}))
-    tag="${output[0]#tag=}"
+        {{LINGUIST_LANGSYAML_PATH}} {{LINGUIST_POPULARYAML_PATH}}))
+    tag="${output[0]#ref=}"
     urls=("${output[@]:1}")
     just _generate-all "${urls[0]}" "${urls[1]}" {{args}}
     echo "$tag" > palettes/UPSTREAM_VERSION

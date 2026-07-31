@@ -24,10 +24,10 @@ grab the format(s) you need and use. No need to worry about any of the rest.
  - JSON file (`.json`)
  - CSV file (`.csv`)
 
-The specific release version of Linguist from which these palettes were
-generated is also given in the `UPSTREAM_VERSION` file. This will generally be
-the latest release, meaning the colours in the palettes should match what can be
-currently seen on GitHub.
+The specific release of Linguist from which these palettes were generated is
+stored in the `UPSTREAM_VERSION` file. This will generally be the latest
+release, meaning the colours in the palettes should match what can be currently
+seen on GitHub.
 
 If there's a palette format missing that you'd find useful, submit an issue and
 I'll see what I can do. Alternatively, feel free to contribute a pull request
@@ -61,8 +61,8 @@ just run --help
 just run --format ccxml path/to/output.ccxml
 ```
 
-By default, the generator will use the latest version of the Linguist data
-directly from the main branch on GitHub, however alternative URLs can be
+By default, the generator module itself use the latest version of the Linguist
+data directly from the main branch on GitHub, however alternative URLs can be
 provided. It also supports using local files instead, which take precedence over
 the default URLs. In either case, the data must match the format set out by
 Linguist.
