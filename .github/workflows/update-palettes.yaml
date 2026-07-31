@@ -1,0 +1,53 @@
+name: Update palettes
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-palettes
+  cancel-in-progress: false
+
+jobs:
+  update-palettes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+
+      - name: Install just
+        uses: extractions/setup-just@v4
+
+      - name: Bootstrap environment
+        run: just bootstrap
+
+      - name: Generate palettes
+        run: just all-release
+
+      - name: Stage and check for changes
+        id: git-check
+        run: |
+          git add palettes/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          version=$(cat palettes/UPSTREAM_VERSION)
+          git commit -m "Update palettes based on Linguist ${version}"
+          git push
