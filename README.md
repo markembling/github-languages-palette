@@ -44,7 +44,10 @@ The most convenient way to invoke the generator is via the just recipes:
 # Needed before any subsequent commands.
 just bootstrap
 
-# Generate all palette files freshly in ./palette/.
+# Generate all palette files freshly from the latest Linguist release.
+just all-release
+
+# Generate all palette files freshly from the latest on main.
 just all
 
 # Invoke the generator with no predefined args (you'll have to provide them -
@@ -54,9 +57,10 @@ just run --format ccxml path/to/output.ccxml
 ```
 
 By default, the generator will use the latest version of the Linguist data
-directly from GitHub, however alternative URLs can be provided. It also supports
-using local files instead, which take precedence over the default URLs. In
-either case, the data must match the format set out by Linguist.
+directly from the main branch on GitHub, however alternative URLs can be
+provided. It also supports using local files instead, which take precedence over
+the default URLs. In either case, the data must match the format set out by
+Linguist.
 
 Palettes will be ordered with the popular languages first, followed by the
 others. However if you don't want this, use `--no-popular-first`.
