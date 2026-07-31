@@ -57,6 +57,7 @@ def run(argv: list[str] | None = None) -> int:
             print(f"error: {path!r} does not exist in {args.repo} at {tag}", file=sys.stderr)
         return 1
 
+    print(f"tag={tag}")
     for path in args.paths:
         print(build_raw_url(args.repo, tag, path))
     return 0

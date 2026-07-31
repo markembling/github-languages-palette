@@ -24,6 +24,11 @@ grab the format(s) you need and use. No need to worry about any of the rest.
  - JSON file (`.json`)
  - CSV file (`.csv`)
 
+The specific release version of Linguist from which these palettes were
+generated is also given in the `UPSTREAM_VERSION` file. This will generally be
+the latest release, meaning the colours in the palettes should match what can be
+currently seen on GitHub.
+
 If there's a palette format missing that you'd find useful, submit an issue and
 I'll see what I can do. Alternatively, feel free to contribute a pull request
 adding it.

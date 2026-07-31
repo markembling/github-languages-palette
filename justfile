@@ -1,6 +1,7 @@
 LINGUIST_LANGS_PATH := "lib/linguist/languages.yml"
 LINGUIST_POPULAR_PATH := "lib/linguist/popular.yml"
-LINGUIST_REPO_MAIN_URL := "https://raw.githubusercontent.com/github-linguist/linguist/main"
+LINGUIST_REPO := "github-linguist/linguist"
+LINGUIST_REPO_MAIN_URL := "https://raw.githubusercontent.com/{{LINGUIST_REPO}}/main"
 
 # Invoke the generator with no additional args
 run *args:
@@ -16,9 +17,12 @@ all *args: clean
 all-release *args: clean
     #!/usr/bin/env bash
     set -euo pipefail
-    urls=($(.venv/bin/python scripts/resolve_release_url.py github-linguist/linguist \
+    output=($(.venv/bin/python scripts/resolve_release_url.py {{LINGUIST_REPO}} \
         {{LINGUIST_LANGS_PATH}} {{LINGUIST_POPULAR_PATH}}))
+    tag="${output[0]#tag=}"
+    urls=("${output[@]:1}")
     just _generate-all "${urls[0]}" "${urls[1]}" {{args}}
+    echo "$tag" > palettes/UPSTREAM_VERSION
 
 # Internal: fetch languages/popular data once, then generate every format from the local copies
 _generate-all languages_url popular_url *extra_args:
