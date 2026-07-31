@@ -1,246 +1,676 @@
 GIMP Palette
 # See https://github.com/markembling/github-languages-palette
-128  75 204 1C Enterprise
-232  39  74 ABAP
-136  42  15 ActionScript
-  1 248 139 Ada
- 48  86 101 Agda
-185 217 255 AGS Script
-100 200   0 Alloy
-229 238 187 AMPL
-198 214 220 AngelScript
-157 195 255 ANTLR
- 41 204 167 API Blueprint
- 90 129 100 APL
- 16  30  31 AppleScript
-169  42 253 Arc
-105  64 252 ASP
-168  86 176 AspectJ
-109  76  19 Assembly
- 74  12  12 Asymptote
- 26 197  32 ATS
-101 147 185 AutoHotkey
- 28  53  82 AutoIt
-255  79   0 Ballerina
-192 240  46 Batchfile
-205 100   0 BlitzMax
-212 190 193 Boo
- 47  37  48 Brainfuck
  85  85  85 C
  23 134   0 C#
 243  74 124 C++
+ 36  70 118 CoffeeScript
+102  50 153 CSS
+  0 180 170 Dart
+ 68 114 100 DM
+109  74 126 Elixir
+  0 172 216 Go
+ 66 152 184 Groovy
+227  76  37 HTML
+176 113  24 Java
+240 223  90 JavaScript
+168 123 255 Kotlin
+ 66 141 255 Objective-C
+  1 151 195 Perl
+ 79  93 149 PHP
+  0  35  86 PowerShell
+ 53 114 165 Python
+112  21  22 Ruby
+222 164 131 Rust
+194  45  64 Scala
+136 223  81 Shell
+240  81  55 Swift
+ 48 120 198 TypeScript
+128  75 204 1C Enterprise
+ 56 118  28 2-Dimensional Array
+  0  65 137 4D
+232  39  74 ABAP
+ 84  94  37 ABAP CDS
+185 217 255 AGS Script
+ 52 235 107 AIDL
+ 57 162 181 AL
+209 224 219 ALGOL
+229 238 187 AMPL
+157 195 255 ANTLR
+ 41 204 167 API Blueprint
+ 90 129 100 APL
+147   0 255 ASP.NET
+ 26 197  32 ATS
+136  42  15 ActionScript
+  1 248 139 Ada
+128   0   0 Adblock Filter List
+250  15   0 Adobe Font Metrics
+ 48  86 101 Agda
+ 99  15 247 Aiken
+100 200   0 Alloy
+ 12  88 127 Alpine Abuild
+168 150  98 Altium Designer
+198 214 220 AngelScript
+168 204  40 Answer Set Programming
+169  21 125 Ant Build System
+254  38 157 Antlers
+209  32  38 ApacheConf
+ 23 150 192 Apex
+ 10  61 145 Apollo Guidance Computer
+ 16  30  31 AppleScript
+169  42 253 Arc
+115 160 196 AsciiDoc
+168  86 176 AspectJ
+109  76  19 Assembly
+255  90   2 Astro
+255   0   0 Asymptote
+156 193  51 Augeas
+101 147 185 AutoHotkey
+ 28  53  82 AutoIt
+  0  64 255 Avro IDL
+195  14 154 Awk
+137 168 197 B (Formal Method)
+  0 228 255 B4X
+168  84 247 BAML
+255   0   0 BASIC
+ 43 112 103 BQN
+255  79   0 Ballerina
+192 240  46 Batchfile
+165  47  77 Beef
+ 21 161  60 Berry
+119 135 153 BibTeX
+ 81 153 185 Bicep
+ 85  98 171 Bikeshed
+106  70  63 Bison
+  0 187 228 BitBake
+247  82  63 Blade
+  0 255 173 BlitzBasic
+205 100   0 BlitzMax
+ 18  34  60 Bluespec
+ 18  34  60 Bluespec BH
+212 190 193 Boo
+200  15 159 Boogie
+ 47  37  48 Brainfuck
+101 170 187 BrighterScript
+101  45 145 Brightscript
+255 213  57 Browserslist
+244 170  65 Bru
+  0 106 255 BuildStream
+ 36  98 235 C3
+  0 145 209 CAP CDS
+  0 163   0 CLIPS
+218  52  52 CMake
+241 164  42 COLLADA
+  0  96 145 CQL
+ 36  70 118 CSON
+ 35 115  70 CSV
+ 88 134 225 CUE
+  0   0 122 CWeb
+ 71  52 101 Cabal Config
+ 34 181  56 Caddyfile
+  0 239 139 Cadence
+255  74  71 Cairo
+255  74  71 Cairo Zero
+ 58 225  50 CameLIGO
+  0 134 139 Cangjie
+196  39  39 Cap'n Proto
+ 34  34  34 Carbon
 223 164  52 Ceylon
 141 198  62 Chapel
+ 62 128   0 ChucK
+112 116 116 Circom
 204 204 254 Cirru
 219 144  30 Clarion
+ 85  69 255 Clarity
+105  64 252 Classic ASP
  63 133 175 Clean
 227 230 243 Click
 219  87  85 Clojure
- 36  70 118 CoffeeScript
+ 13 148 143 Closure Templates
+255 159   0 Cloud Firestore Security Rules
+  0   9 181 Clue
+ 20  15  70 CodeQL
 237  44 213 ColdFusion
+237  44 213 ColdFusion CFC
  63 182 139 Common Lisp
 181  48  75 Common Workflow Language
 175 206  78 Component Pascal
+225  90  41 Cooklang
   0   1   0 Crystal
- 86  60 124 CSS
+ 26  26  26 Csound
+ 26  26  26 Csound Document
+ 26  26  26 Csound Score
  57  78  58 Cuda
+ 83  18  65 Curry
+  0 179 253 Cylc
+ 52 192 235 Cypher
+254 223  90 Cython
 186  89  93 D
-  0 180 170 Dart
+ 81 109 232 D2
+254 235  37 Dafny
+142 255  34 Darcs Patch
+211 211 211 Daslang
   0  58  82 DataWeave
- 68 114 100 DM
+215   7  80 Debian Package Control File
+251 238 149 DenizenScript
+223 175 255 Dhall
+170 206  96 DirectX 3D File
  56  76  84 Dockerfile
 204 167  96 Dogescript
+229 212  89 Dotenv
+137  65  30 Dune
 107  97 110 Dylan
 203 206  52 E
-145  56  96 eC
 138  17 102 ECL
-148 108  87 Eiffel
-109  74 126 Elixir
+  0  29 157 ECLiPSe
+169  30  79 EJS
+167 133  73 EQ
+ 42 240 255 Earthly
+  6 148   6 Easybuild
+145  56  96 Ecere Projects
+235 129  48 Ecmarkup
+ 13 254 223 Edge
+ 48 166 255 EdgeQL
+255 241 242 EditorConfig
+ 76 104 119 Eiffel
  96 180 204 Elm
+ 85 187  85 Elvish
+ 85 187  85 Elvish Transcript
 191 101 219 Emacs Lisp
 255 244 243 EmberScript
-167 133  73 EQ
 183  57 151 Erlang
+255 121  10 Euphoria
 183  68 252 F#
  87  46  47 F*
+255 220 187 FIGlet Font
+ 46  99  47 FIRRTL
+135 203 255 FLUX
  98 103  70 Factor
 123 156 179 Fancy
  20  37  60 Fantom
-135 203 255 FLUX
+195 113  63 Faust
+255 243 215 Fennel
+246 185   0 Filebench WML
+237  40  74 FlatBuffers
+212  73  69 Flix
+255 204  50 Fluent
  52  22   8 Forth
  77  65 177 Fortran
+ 77  65 177 Fortran Free Form
+ 20  26 201 FreeBASIC
   0  79 178 FreeMarker
   0 201 254 Frege
-113 180  23 Game Maker Language
+ 95   1  30 Futhark
+207 139 242 G-code
+254 199 102 GAML
+244 154  33 GAMS
+  0   0 204 GAP
+255 206 170 GCC Machine Description
  53  84 112 GDScript
+ 70 140 191 GDShader
+  0  48  88 GEDCOM
+ 86 134 165 GLSL
+255 103   0 GSC
+113 180  23 Game Maker Language
+112  21  22 Gemfile.lock
+255 104   0 Gemini
+ 99  64 142 Genero 4gl
+215 223  57 Genero per
 250 133  93 Genie
+149  21  48 Genshi
+147   0 255 Gentoo Ebuild
+147   0 255 Gentoo Eclass
+210  10   0 Gerber Image
  91  31  99 Gherkin
+244  76  39 Git Attributes
+244  76  39 Git Commit
+244  76  39 Git Config
+244  76  39 Git Revision List
+255 175 243 Gleam
+245 130  95 Glimmer JS
+ 48 120 198 Glimmer TS
 193 172 127 Glyph
 240 169 240 Gnuplot
-  0 172 216 Go
+  0 172 216 Go Checksums
+  0 172 216 Go Module
+  0 172 216 Go Template
+  0 172 216 Go Workspace
+ 53  84 112 Godot Resource
 136  86  41 Golo
 129 147 127 Gosu
-121 170 122 Grammatical Framework
-230 158  86 Groovy
+ 97  95 139 Grace
+  2  48  58 Gradle
+  2  48  58 Gradle Kotlin DSL
+255   0   0 Grammatical Framework
+225   0 152 GraphQL
+ 37 149 190 Graphviz (DOT)
+ 66 152 184 Groovy Server Pages
+126 230  25 GtkRC
+ 16 108 169 HAProxy
+131  79 185 HCL
+ 79  57  79 HIP
+170 206  96 HLSL
+159 248 238 HOCON
+ 46  16  82 HTML+ECR
+109  74 126 HTML+EEX
+112  21  22 HTML+ERB
+ 79  93 149 HTML+PHP
+ 80  42 228 HTML+Razor
+  0  91 156 HTTP
+246 134  17 HXML
 135 135 135 Hack
+236 226 169 Haml
+246 147  30 Handlebars
  14  96 227 Harbour
+157 116  35 Hare
  94  80 134 Haskell
 223 121   0 Haxe
 220 226   0 HiveQL
 255 239 175 HolyC
-227  76  37 HTML
+ 48 135 136 Hosts File
+255   1 135 Hurl
 118 144 178 Hy
 162  82  47 IDL
+  0   0 204 IGOR Pro
+ 80  42 212 IL Assembly
+209 219 224 INI
+ 45 104 177 ISPC
 179   0   0 Idris
+  0   0   0 Ignore List
+153 169 255 ImageJ Macro
+ 22 206 198 Imba
+ 38  74 153 Inno Setup
 169  24 140 Io
   7 129 147 Ioke
 254 253   0 Isabelle
+254 253   0 Isabelle ROOT
 158 236 255 J
-176 113  24 Java
-240 223  90 JavaScript
-132  48 120 Jolie
+176 113  24 JAR Manifest
+217  13   8 JCL
+219 201   0 JFlex
+ 41  41  41 JSON
+ 41  41  41 JSON with Comments
+ 38 124 185 JSON5
+ 12  70 156 JSONLD
  64 212 126 JSONiq
+252 120  45 Jac
+170 138  75 Jai
+  8 134 165 Janet
+208  53   0 Jasmin
+ 41  98 119 Java Properties
+ 41  98 119 Java Server Pages
+ 41  98 119 Java Template Engine
+240 223  90 JavaScript+ERB
+ 20 194  18 Jest Snapshot
+ 32 215 137 JetBrains MPS
+165  42  33 Jinja
+ 86 179 203 Jison
+ 86 179 203 Jison Lex
+132  48 120 Jolie
   0 100 189 Jsonnet
 161 112 185 Julia
+161 112 185 Julia REPL
 218  90  10 Jupyter Notebook
-241 142  50 Kotlin
+ 56  76  84 Just
+121 186 191 KCL
+255 179 179 KDL
+ 65 149 196 KFramework
  39  67  10 KRL
-153 153 153 Lasso
-219 201   0 Lex
+119  58  55 Kaitai Struct
+111 128  65 KakouneScript
+ 65 172 240 KerboScript
+ 47  74 171 KiCad Layout
+ 47  74 171 KiCad Legacy Layout
+ 47  74 171 KiCad Schematic
+185 216 185 KoLmafia ASH
+ 32  80 102 Koka
  76  48  35 LFE
- 73 152 134 LiveScript
  24  86  25 LLVM
 204 153   0 LOLCODE
-100  43 129 LookML
  61 153 112 LSL
+254 222   5 LabVIEW
+128  38 163 Lambdapi
+ 43 140 135 Langium
+ 40 127 185 Lark
+153 153 153 Lasso
+242 164  65 Latte
+195 255 194 Leo
+ 28  54  93 Less
+219 201   0 Lex
+ 14 115 254 LigoLANG
+155 204 124 LilyPond
+102 183 222 Liquid
+153   0 101 Liquidsoap
+ 48  86 101 Literate Agda
+ 36  70 118 Literate CoffeeScript
+ 94  80 134 Literate Haskell
+ 11  91 165 LiveCode Script
+ 73 152 134 LiveScript
+ 40  91 154 Logtalk
+100  43 129 LookML
   0   0 128 Lua
- 65 120  24 Makefile
-249 119  50 Mask
+  0 161 255 Luau
+ 23 156 125 M3U
 225 102  55 MATLAB
-196 167 155 Max
   0 165 166 MAXScript
-226  39  55 mcfunction
-255  43  43 Mercury
-  0 120   0 Meson
-142  19 233 Metal
-199 169  56 Mirah
- 33  51 136 Modula-3
+252 178  43 MDX
+ 94 200 219 MLIR
  97 167 214 MQL4
  73 117 184 MQL5
 182 225 244 MTML
+216 255 255 Macaulay2
+ 65 120  24 Makefile
+126 133 141 Mako
+  8  62 161 Markdown
+ 65 191 242 Marko
+249 119  50 Mask
+  5  47 173 Mathematical Programming System
+196 167 155 Max
+105  89 205 MeTTa
+255  43  43 Mercury
+255  53 111 Mermaid
+  0 120   0 Meson
+142  19 233 Metal
+254  17  17 MiniYAML
+  6 169 230 MiniZinc
+  1 176  70 Mint
+199 169  56 Mirah
+222  29  49 Modelica
+ 16  37  63 Modula-2
+ 33  51 136 Modula-3
+255  76  31 Mojo
+141 102  71 Monkey C
+185  35 129 MoonBit
+255  68 132 MoonScript
+251 176  58 Motoko
+  0  92 170 Motorola 68K Assembly
+ 73  19 121 Move
+114  75  59 Mustache
  40  67  31 NCL
+  0  52 107 NMODL
+203  55  55 NPM Config
+ 17  21  34 NWScript
+ 28  43  78 Nasal
 153   0   0 Nearley
  60  60 110 Nemerle
-148 175 199 nesC
   9 160 255 NetLinx
 115 127 170 NetLinx+ERB
 255  98 117 NetLogo
 135 174 215 NewLisp
  58 195 134 Nextflow
- 55 119  91 Nim
+  0 150  56 Nginx
+224 195 252 Nickel
+255 194   0 Nim
   0 153  23 Nit
 126 126 255 Nix
+ 47  31  73 Noir
 201 223  64 Nu
- 66 141 255 Objective-C
+156 138 249 NumPy
+ 60 129  55 Nunjucks
+ 77 153   6 Nushell
+133 233  45 OASv2-json
+133 233  45 OASv2-yaml
+133 233  45 OASv3-json
+133 233  45 OASv3-yaml
+239 121   8 OCaml
+160 224 160 OMNeT++ MSG
+  7  95 124 OMNeT++ NED
+ 65  71 147 ObjectScript
 103 102 251 Objective-C++
 254  12  89 Objective-J
- 58 225  50 OCaml
+ 96 175 254 Odin
 201 187 255 Omgrofl
-176 183 126 ooc
 246 237 224 Opal
+124 144 153 Open Policy Agent
+133 233  45 OpenAPI Specification v2
+133 233  45 OpenAPI Specification v3
+237  45  44 OpenCL
+ 91 230   0 OpenEdge ABL
+169 112 255 OpenQASM
+228 205  69 OpenSCAD
+ 70 103  49 Option List
+119 170 153 Org
+120 179  84 OverPy
+204 225 170 OverpassQL
 205 208 227 Oxygene
 249 182  56 Oz
 112  85 181 P4
+ 12   0 255 PDDL
+ 35  76 107 PEG.js
+218 216 216 PLSQL
+ 50 103 144 PLpgSQL
+106 171 101 POV-Ray SDL
+247 167 184 Pact
 204   0   0 Pan
 101   0 204 Papyrus
 243 202   9 Parrot
 226 241 113 Pascal
 219 178 132 Pawn
 199 110  90 Pep8
-  1 151 195 Perl
-  0   0 251 Perl 6
- 79  93 149 PHP
+ 96 103 175 PicoLisp
 251 215 222 PigLatin
   0  83 144 Pike
-218 216 216 PLSQL
+255 210  66 Pip Requirements
+106 149  67 Pkl
+251 189  22 PlantUML
 216   0 115 PogoScript
+174 129 255 Polar
+248 189   0 Portugol
+220  57  11 PostCSS
 218  41  27 PostScript
+210 141  13 Power Query
 143  15 140 PowerBuilder
-  0  35  86 PowerShell
+200  80 108 Praat
+ 12  52  75 Prisma
+187 131 104 Pro*C
   0 149 216 Processing
+ 58  46  99 Procfile
 116  40  59 Prolog
+222   0   0 Promela
 127 162 166 Propeller Spin
+168  99  84 Pug
  47  43 109 Puppet
  89 105 134 PureBasic
  29  34  45 PureScript
- 53 114 165 Python
-  0  63 205 q
+238  30  16 Pyret
+ 53 114 165 Python console
+ 53 114 165 Python traceback
+254 213  88 Q#
  67 165  27 QML
+  0 184  65 Qt Script
 136  33  51 Quake
+151  87 118 QuakeC
+  0 127 128 QuickBASIC
+157 107 229 Quint
  25 139 230 R
+118 216 251 RAML
+ 44 151 249 RAScript
+112  21  22 RBS
+112  21  22 RDoc
+217  13   8 REXX
+ 25 139 230 RMarkdown
+166  44   0 RON
+ 34  49  77 ROS Interface
+ 43 222  32 RPGLE
+102  89  78 RUNOFF
  60  91 169 Racket
 157  82   0 Ragel
-118 216 251 RAML
+  0   0 251 Raku
 255 249 160 Rascal
+237  79  80 ReScript
+255  88  70 Reason
+255  88  70 ReasonLIGO
  53 138  91 Rebol
+  6 114 186 Record Jar
 245   0   0 Red
+244  67  53 Redscript
+  0 154   0 Regular Expression
 255 127 127 Ren'Py
+255 218 179 Rez
  45  84 203 Ring
+167  30  73 Riot
+  0 192 181 RobotFramework
+123  56 245 Roc
+208 181 140 Rocq Prover
 236 222 190 Roff
+236 222 190 Roff Manpage
 204   0 135 Rouge
-112  21  22 Ruby
-102  89  78 RUNOFF
-222 164 131 Rust
-100 100 100 SaltStack
+222  57  64 RouterOS Script
 179  73  54 SAS
-194  45  64 Scala
+198  82 139 SCSS
+ 11  68 151 SPARQL
+ 63  63  63 SQF
+227 140   0 SQL
+227 140   0 SQLPL
+ 51 138  52 SRecode Template
+ 55  59  94 STL
+255 152   0 SVG
+ 37 156 213 Sail
+100 100 100 SaltStack
+165  58 111 Sass
+188  24  25 Scaml
+253 198   0 Scenic
  30  73 236 Scheme
-100 185 112 sed
+202  15  32 Scilab
   5 121 170 Self
-136 223  81 Shell
+ 33  43  55 ShaderLab
+206 207 203 ShellCheck Config
  18  15  20 Shen
+201 191 237 Simple File Verification
+100 230 173 Singularity
+ 31 190 201 Slang
   0 125 255 Slash
   0  62 162 Slice
+ 43  43  43 Slim
+ 35 120 244 Slint
+201  73  73 SmPL
  88 103   6 Smalltalk
+240 192  64 Smarty
+196  68  54 Smithy
+ 65 145 120 Snakemake
 170 102  70 Solidity
- 92 118  16 SourcePawn
- 63  63  63 SQF
+246 157  28 SourcePawn
+165  48 137 SpiceDB Schema
 128   0   0 Squirrel
- 51 138  52 SRecode Template
 178   0  28 Stan
 220  85 108 Standard ML
+118 210 116 Starlark
+ 25  94 145 Stata
+ 63 179  79 StringTemplate
+255  98  70 Stylus
+158   0   0 SubRip Text
+ 47 204 159 SugarSS
  70  57  11 SuperCollider
-255 171  68 Swift
+255   0 159 SurrealQL
+255 204 153 Survex data
+255  61   0 Svelte
+  0 245 139 Sway
+ 25 139 230 Sweave
 218 225 194 SystemVerilog
-228 204 152 Tcl
-  0   0  76 Terra
- 60  97  23 TeX
 159 170 135 TI Program
+196   0  35 TL-Verilog
+ 74   0 121 TLA
+240 201  18 TMDL
+156  65  32 TOML
+227 140   0 TSQL
+ 35 115  70 TSV
+ 48 120 198 TSX
+  0 120 184 TXL
+ 71 181 255 Tact
+ 51  51  51 Talon
+228 204 152 Tcl
+ 60  97  23 TeX
+  0 176 188 Teal
+  0   0  76 Terra
+122  66 187 Terraform Template
+200  80 108 TextGrid
+222 102 228 TextMate Properties
+255 231 172 Textile
+209  32  38 Thrift
+194 201 251 Toit
+ 88  49 107 Tor Config
+142 166  75 Tree-sitter Query
 206  20  42 Turing
- 43 116 136 TypeScript
+192 208  38 Twig
+ 74  53 101 TypeSpec
+ 34 157 173 Typst
+ 78  54  23 Unified Parallel C
+ 33  43  55 Unity3D Asset
+153  50 204 Uno
 165  75  76 UnrealScript
-250 228 205 Vala
+ 54 173 189 Untyped Plutus Core
+204 204 238 UrWeb
+ 79 134 196 V
+133 125 177 VBA
+ 21 219 220 VBScript
  20 138 168 VCL
-177 183 248 Verilog
 173 178 203 VHDL
- 24 159  75 Vim script
-148  92 183 Visual Basic
+165 109 226 Vala
+242  96  36 Valve Data Format
+ 80 124 254 Velocity Template Language
+255   0 127 Vento
+177 183 248 Verilog
+ 24 159  75 Vim Help File
+ 24 159  75 Vim Script
+ 24 159  75 Vim Snippet
+148  92 183 Visual Basic .NET
+ 44  99  83 Visual Basic 6.0
  31  31  31 Volt
- 44  61  80 Vue
- 66 241 244 wdl
+ 65 184 131 Vue
+159  76 242 Vyper
+ 66 241 244 WDL
+ 25  94 154 WGSL
+ 91 112 189 Web Ontology Language
   4  19  59 WebAssembly
-116 129 209 wisp
+ 97  80 231 WebAssembly Interface Type
+212 194 151 Whiley
+252  87  87 Wikitext
+ 82 212 254 Windows Registry Entries
+255   0   0 Witcher Script
+221  17   0 Wolfram Language
 162  55  56 Wollok
+247 228  63 World of Warcraft Addon Data
+ 56  56  56 Wren
  75 107 239 X10
- 64  57  64 xBase
 152 218   7 XC
+  0  95 172 XML
+  0  95 172 XML Property List
  82  49 231 XQuery
 235 140 235 XSLT
- 75 108  75 Yacc
+ 34 159 120 Xmake
+128 189  65 Xojo
+ 40  93 239 Xonsh
+ 36  37  93 Xtend
+203  23  29 YAML
  34   0   0 YARA
  49 171 144 YASnippet
+ 75 108  75 Yacc
+121  73  49 Yul
  12 102  93 ZAP
+219 116 229 ZIL
   0 188 209 ZenScript
  16 142 158 Zephir
 236 144  91 Zig
-219 116 229 ZIL
+213 119  17 Zimpl
+255 112   0 Zmodel
+233 215 172 crontab
+145  56  96 eC
+ 73 174  71 fish
+  0 177 112 hoon
+236  86  76 iCalendar
+199  37  78 jq
+ 29 166 224 kvlang
+ 61  86 195 mIRC Script
+226  39  55 mcfunction
+ 95 158 160 mdsvex
+ 36  73  99 mupad
+ 44   0  77 nanorc
+148 175 199 nesC
+176 183 126 ooc
+ 43  93 130 pkg-config
+  0  63 205 q
+ 20  20  20 reStructuredText
+100 185 112 sed
+102 207 220 templ
+238  37  70 vCard
+116 129 209 wisp
+ 64  57  64 xBase

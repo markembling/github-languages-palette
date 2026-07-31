@@ -1,245 +1,675 @@
 Language,R,G,B,Hex
-1C Enterprise,128,75,204,#814ccc
-ABAP,232,39,74,#e8274b
-ActionScript,136,42,15,#882b0f
-Ada,1,248,139,#02f88c
-Agda,48,86,101,#315665
-AGS Script,185,217,255,#b9d9ff
-Alloy,100,200,0,#64c800
-AMPL,229,238,187,#e6efbb
-AngelScript,198,214,220,#c7d7dc
-ANTLR,157,195,255,#9dc3ff
-API Blueprint,41,204,167,#2acca8
-APL,90,129,100,#5a8164
-AppleScript,16,30,31,#101f1f
-Arc,169,42,253,#aa2afe
-ASP,105,64,252,#6a40fd
-AspectJ,168,86,176,#a957b0
-Assembly,109,76,19,#6e4c13
-Asymptote,74,12,12,#4a0c0c
-ATS,26,197,32,#1ac620
-AutoHotkey,101,147,185,#6594b9
-AutoIt,28,53,82,#1c3552
-Ballerina,255,79,0,#ff5000
-Batchfile,192,240,46,#c1f12e
-BlitzMax,205,100,0,#cd6400
-Boo,212,190,193,#d4bec1
-Brainfuck,47,37,48,#2f2530
 C,85,85,85,#555
 C#,23,134,0,#178600
 C++,243,74,124,#f34b7d
+CoffeeScript,36,70,118,#244776
+CSS,102,50,153,#639
+Dart,0,180,170,#00b4ab
+DM,68,114,100,#447265
+Elixir,109,74,126,#6e4a7e
+Go,0,172,216,#00add8
+Groovy,66,152,184,#4298b8
+HTML,227,76,37,#e34c26
+Java,176,113,24,#b07219
+JavaScript,240,223,90,#f1e05a
+Kotlin,168,123,255,#a97bff
+Objective-C,66,141,255,#438eff
+Perl,1,151,195,#0298c3
+PHP,79,93,149,#4f5d95
+PowerShell,0,35,86,#012456
+Python,53,114,165,#3572a5
+Ruby,112,21,22,#701516
+Rust,222,164,131,#dea584
+Scala,194,45,64,#c22d40
+Shell,136,223,81,#89e051
+Swift,240,81,55,#f05138
+TypeScript,48,120,198,#3178c6
+1C Enterprise,128,75,204,#814ccc
+2-Dimensional Array,56,118,28,#38761d
+4D,0,65,137,#004289
+ABAP,232,39,74,#e8274b
+ABAP CDS,84,94,37,#555e25
+AGS Script,185,217,255,#b9d9ff
+AIDL,52,235,107,#34eb6b
+AL,57,162,181,#3aa2b5
+ALGOL,209,224,219,#d1e0db
+AMPL,229,238,187,#e6efbb
+ANTLR,157,195,255,#9dc3ff
+API Blueprint,41,204,167,#2acca8
+APL,90,129,100,#5a8164
+ASP.NET,147,0,255,#9400ff
+ATS,26,197,32,#1ac620
+ActionScript,136,42,15,#882b0f
+Ada,1,248,139,#02f88c
+Adblock Filter List,128,0,0,#800000
+Adobe Font Metrics,250,15,0,#fa0f00
+Agda,48,86,101,#315665
+Aiken,99,15,247,#640ff8
+Alloy,100,200,0,#64c800
+Alpine Abuild,12,88,127,#0d597f
+Altium Designer,168,150,98,#a89663
+AngelScript,198,214,220,#c7d7dc
+Answer Set Programming,168,204,40,#a9cc29
+Ant Build System,169,21,125,#a9157e
+Antlers,254,38,157,#ff269e
+ApacheConf,209,32,38,#d12127
+Apex,23,150,192,#1797c0
+Apollo Guidance Computer,10,61,145,#0b3d91
+AppleScript,16,30,31,#101f1f
+Arc,169,42,253,#aa2afe
+AsciiDoc,115,160,196,#73a0c5
+AspectJ,168,86,176,#a957b0
+Assembly,109,76,19,#6e4c13
+Astro,255,90,2,#ff5a03
+Asymptote,255,0,0,#f00
+Augeas,156,193,51,#9cc134
+AutoHotkey,101,147,185,#6594b9
+AutoIt,28,53,82,#1c3552
+Avro IDL,0,64,255,#0040ff
+Awk,195,14,154,#c30e9b
+B (Formal Method),137,168,197,#8aa8c5
+B4X,0,228,255,#00e4ff
+BAML,168,84,247,#a855f7
+BASIC,255,0,0,#f00
+BQN,43,112,103,#2b7067
+Ballerina,255,79,0,#ff5000
+Batchfile,192,240,46,#c1f12e
+Beef,165,47,77,#a52f4e
+Berry,21,161,60,#15a13c
+BibTeX,119,135,153,#789
+Bicep,81,153,185,#519aba
+Bikeshed,85,98,171,#5562ac
+Bison,106,70,63,#6a463f
+BitBake,0,187,228,#00bce4
+Blade,247,82,63,#f7523f
+BlitzBasic,0,255,173,#00ffae
+BlitzMax,205,100,0,#cd6400
+Bluespec,18,34,60,#12223c
+Bluespec BH,18,34,60,#12223c
+Boo,212,190,193,#d4bec1
+Boogie,200,15,159,#c80fa0
+Brainfuck,47,37,48,#2f2530
+BrighterScript,101,170,187,#6ab
+Brightscript,101,45,145,#662d91
+Browserslist,255,213,57,#ffd539
+Bru,244,170,65,#f4aa41
+BuildStream,0,106,255,#006bff
+C3,36,98,235,#2563eb
+CAP CDS,0,145,209,#0092d1
+CLIPS,0,163,0,#00a300
+CMake,218,52,52,#da3434
+COLLADA,241,164,42,#f1a42b
+CQL,0,96,145,#006091
+CSON,36,70,118,#244776
+CSV,35,115,70,#237346
+CUE,88,134,225,#5886e1
+CWeb,0,0,122,#00007a
+Cabal Config,71,52,101,#483465
+Caddyfile,34,181,56,#22b638
+Cadence,0,239,139,#00ef8b
+Cairo,255,74,71,#ff4a48
+Cairo Zero,255,74,71,#ff4a48
+CameLIGO,58,225,50,#3be133
+Cangjie,0,134,139,#00868b
+Cap'n Proto,196,39,39,#c42727
+Carbon,34,34,34,#222
 Ceylon,223,164,52,#dfa535
 Chapel,141,198,62,#8dc63f
+ChucK,62,128,0,#3f8000
+Circom,112,116,116,#707575
 Cirru,204,204,254,#ccf
 Clarion,219,144,30,#db901e
+Clarity,85,69,255,#5546ff
+Classic ASP,105,64,252,#6a40fd
 Clean,63,133,175,#3f85af
 Click,227,230,243,#e4e6f3
 Clojure,219,87,85,#db5855
-CoffeeScript,36,70,118,#244776
+Closure Templates,13,148,143,#0d948f
+Cloud Firestore Security Rules,255,159,0,#ffa000
+Clue,0,9,181,#0009b5
+CodeQL,20,15,70,#140f46
 ColdFusion,237,44,213,#ed2cd6
+ColdFusion CFC,237,44,213,#ed2cd6
 Common Lisp,63,182,139,#3fb68b
 Common Workflow Language,181,48,75,#b5314c
 Component Pascal,175,206,78,#b0ce4e
+Cooklang,225,90,41,#e15a29
 Crystal,0,1,0,#000100
-CSS,86,60,124,#563d7c
+Csound,26,26,26,#1a1a1a
+Csound Document,26,26,26,#1a1a1a
+Csound Score,26,26,26,#1a1a1a
 Cuda,57,78,58,#3a4e3a
+Curry,83,18,65,#531242
+Cylc,0,179,253,#00b3fd
+Cypher,52,192,235,#34c0eb
+Cython,254,223,90,#fedf5b
 D,186,89,93,#ba595e
-Dart,0,180,170,#00b4ab
+D2,81,109,232,#526ee8
+Dafny,254,235,37,#ffec25
+Darcs Patch,142,255,34,#8eff23
+Daslang,211,211,211,#d3d3d3
 DataWeave,0,58,82,#003a52
-DM,68,114,100,#447265
+Debian Package Control File,215,7,80,#d70751
+DenizenScript,251,238,149,#fbee96
+Dhall,223,175,255,#dfafff
+DirectX 3D File,170,206,96,#aace60
 Dockerfile,56,76,84,#384d54
 Dogescript,204,167,96,#cca760
+Dotenv,229,212,89,#e5d559
+Dune,137,65,30,#89421e
 Dylan,107,97,110,#6c616e
 E,203,206,52,#ccce35
-eC,145,56,96,#913960
 ECL,138,17,102,#8a1267
-Eiffel,148,108,87,#946d57
-Elixir,109,74,126,#6e4a7e
+ECLiPSe,0,29,157,#001d9d
+EJS,169,30,79,#a91e50
+EQ,167,133,73,#a78649
+Earthly,42,240,255,#2af0ff
+Easybuild,6,148,6,#069406
+Ecere Projects,145,56,96,#913960
+Ecmarkup,235,129,48,#eb8131
+Edge,13,254,223,#0dffe0
+EdgeQL,48,166,255,#31a7ff
+EditorConfig,255,241,242,#fff1f2
+Eiffel,76,104,119,#4d6977
 Elm,96,180,204,#60b5cc
+Elvish,85,187,85,#5b5
+Elvish Transcript,85,187,85,#5b5
 Emacs Lisp,191,101,219,#c065db
 EmberScript,255,244,243,#fff4f3
-EQ,167,133,73,#a78649
 Erlang,183,57,151,#b83998
+Euphoria,255,121,10,#ff790b
 F#,183,68,252,#b845fc
 F*,87,46,47,#572e30
+FIGlet Font,255,220,187,#fdb
+FIRRTL,46,99,47,#2f632f
+FLUX,135,203,255,#8cf
 Factor,98,103,70,#636746
 Fancy,123,156,179,#7b9db4
 Fantom,20,37,60,#14253c
-FLUX,135,203,255,#8cf
+Faust,195,113,63,#c37240
+Fennel,255,243,215,#fff3d7
+Filebench WML,246,185,0,#f6b900
+FlatBuffers,237,40,74,#ed284a
+Flix,212,73,69,#d44a45
+Fluent,255,204,50,#fc3
 Forth,52,22,8,#341708
 Fortran,77,65,177,#4d41b1
+Fortran Free Form,77,65,177,#4d41b1
+FreeBASIC,20,26,201,#141ac9
 FreeMarker,0,79,178,#0050b2
 Frege,0,201,254,#00cafe
-Game Maker Language,113,180,23,#71b417
+Futhark,95,1,30,#5f021f
+G-code,207,139,242,#d08cf2
+GAML,254,199,102,#ffc766
+GAMS,244,154,33,#f49a22
+GAP,0,0,204,#00c
+GCC Machine Description,255,206,170,#ffcfab
 GDScript,53,84,112,#355570
+GDShader,70,140,191,#478cbf
+GEDCOM,0,48,88,#003058
+GLSL,86,134,165,#5686a5
+GSC,255,103,0,#ff6800
+Game Maker Language,113,180,23,#71b417
+Gemfile.lock,112,21,22,#701516
+Gemini,255,104,0,#ff6900
+Genero 4gl,99,64,142,#63408e
+Genero per,215,223,57,#d8df39
 Genie,250,133,93,#fb855d
+Genshi,149,21,48,#951531
+Gentoo Ebuild,147,0,255,#9400ff
+Gentoo Eclass,147,0,255,#9400ff
+Gerber Image,210,10,0,#d20b00
 Gherkin,91,31,99,#5b2063
+Git Attributes,244,76,39,#f44d27
+Git Commit,244,76,39,#f44d27
+Git Config,244,76,39,#f44d27
+Git Revision List,244,76,39,#f44d27
+Gleam,255,175,243,#ffaff3
+Glimmer JS,245,130,95,#f5835f
+Glimmer TS,48,120,198,#3178c6
 Glyph,193,172,127,#c1ac7f
 Gnuplot,240,169,240,#f0a9f0
-Go,0,172,216,#00add8
+Go Checksums,0,172,216,#00add8
+Go Module,0,172,216,#00add8
+Go Template,0,172,216,#00add8
+Go Workspace,0,172,216,#00add8
+Godot Resource,53,84,112,#355570
 Golo,136,86,41,#88562a
 Gosu,129,147,127,#82937f
-Grammatical Framework,121,170,122,#79aa7a
-Groovy,230,158,86,#e69f56
+Grace,97,95,139,#615f8b
+Gradle,2,48,58,#02303a
+Gradle Kotlin DSL,2,48,58,#02303a
+Grammatical Framework,255,0,0,#f00
+GraphQL,225,0,152,#e10098
+Graphviz (DOT),37,149,190,#2596be
+Groovy Server Pages,66,152,184,#4298b8
+GtkRC,126,230,25,#7fe719
+HAProxy,16,108,169,#106da9
+HCL,131,79,185,#844fba
+HIP,79,57,79,#4f3a4f
+HLSL,170,206,96,#aace60
+HOCON,159,248,238,#9ff8ee
+HTML+ECR,46,16,82,#2e1052
+HTML+EEX,109,74,126,#6e4a7e
+HTML+ERB,112,21,22,#701516
+HTML+PHP,79,93,149,#4f5d95
+HTML+Razor,80,42,228,#512be4
+HTTP,0,91,156,#005c9c
+HXML,246,134,17,#f68712
 Hack,135,135,135,#878787
+Haml,236,226,169,#ece2a9
+Handlebars,246,147,30,#f7931e
 Harbour,14,96,227,#0e60e3
+Hare,157,116,35,#9d7424
 Haskell,94,80,134,#5e5086
 Haxe,223,121,0,#df7900
 HiveQL,220,226,0,#dce200
 HolyC,255,239,175,#ffefaf
-HTML,227,76,37,#e34c26
+Hosts File,48,135,136,#308888
+Hurl,255,1,135,#ff0288
 Hy,118,144,178,#7790b2
 IDL,162,82,47,#a3522f
+IGOR Pro,0,0,204,#00c
+IL Assembly,80,42,212,#512bd4
+INI,209,219,224,#d1dbe0
+ISPC,45,104,177,#2d68b1
 Idris,179,0,0,#b30000
+Ignore List,0,0,0,#000
+ImageJ Macro,153,169,255,#9af
+Imba,22,206,198,#16cec6
+Inno Setup,38,74,153,#264b99
 Io,169,24,140,#a9188d
 Ioke,7,129,147,#078193
 Isabelle,254,253,0,#fefe00
+Isabelle ROOT,254,253,0,#fefe00
 J,158,236,255,#9eedff
-Java,176,113,24,#b07219
-JavaScript,240,223,90,#f1e05a
-Jolie,132,48,120,#843179
+JAR Manifest,176,113,24,#b07219
+JCL,217,13,8,#d90e09
+JFlex,219,201,0,#dbca00
+JSON,41,41,41,#292929
+JSON with Comments,41,41,41,#292929
+JSON5,38,124,185,#267cb9
+JSONLD,12,70,156,#0c479c
 JSONiq,64,212,126,#40d47e
+Jac,252,120,45,#fc792d
+Jai,170,138,75,#ab8b4b
+Janet,8,134,165,#0886a5
+Jasmin,208,53,0,#d03600
+Java Properties,41,98,119,#2a6277
+Java Server Pages,41,98,119,#2a6277
+Java Template Engine,41,98,119,#2a6277
+JavaScript+ERB,240,223,90,#f1e05a
+Jest Snapshot,20,194,18,#15c213
+JetBrains MPS,32,215,137,#21d789
+Jinja,165,42,33,#a52a22
+Jison,86,179,203,#56b3cb
+Jison Lex,86,179,203,#56b3cb
+Jolie,132,48,120,#843179
 Jsonnet,0,100,189,#0064bd
 Julia,161,112,185,#a270ba
+Julia REPL,161,112,185,#a270ba
 Jupyter Notebook,218,90,10,#da5b0b
-Kotlin,241,142,50,#f18e33
+Just,56,76,84,#384d54
+KCL,121,186,191,#7ababf
+KDL,255,179,179,#ffb3b3
+KFramework,65,149,196,#4195c5
 KRL,39,67,10,#28430a
-Lasso,153,153,153,#999
-Lex,219,201,0,#dbca00
+Kaitai Struct,119,58,55,#773b37
+KakouneScript,111,128,65,#6f8042
+KerboScript,65,172,240,#41adf0
+KiCad Layout,47,74,171,#2f4aab
+KiCad Legacy Layout,47,74,171,#2f4aab
+KiCad Schematic,47,74,171,#2f4aab
+KoLmafia ASH,185,216,185,#b9d9b9
+Koka,32,80,102,#215166
 LFE,76,48,35,#4c3023
-LiveScript,73,152,134,#499886
 LLVM,24,86,25,#185619
 LOLCODE,204,153,0,#c90
-LookML,100,43,129,#652b81
 LSL,61,153,112,#3d9970
+LabVIEW,254,222,5,#fede06
+Lambdapi,128,38,163,#8027a3
+Langium,43,140,135,#2c8c87
+Lark,40,127,185,#2980b9
+Lasso,153,153,153,#999
+Latte,242,164,65,#f2a542
+Leo,195,255,194,#c4ffc2
+Less,28,54,93,#1d365d
+Lex,219,201,0,#dbca00
+LigoLANG,14,115,254,#0e74ff
+LilyPond,155,204,124,#9ccc7c
+Liquid,102,183,222,#67b8de
+Liquidsoap,153,0,101,#906
+Literate Agda,48,86,101,#315665
+Literate CoffeeScript,36,70,118,#244776
+Literate Haskell,94,80,134,#5e5086
+LiveCode Script,11,91,165,#0c5ba5
+LiveScript,73,152,134,#499886
+Logtalk,40,91,154,#295b9a
+LookML,100,43,129,#652b81
 Lua,0,0,128,#000080
-Makefile,65,120,24,#427819
-Mask,249,119,50,#f97732
+Luau,0,161,255,#00a2ff
+M3U,23,156,125,#179c7d
 MATLAB,225,102,55,#e16737
-Max,196,167,155,#c4a79c
 MAXScript,0,165,166,#00a6a6
-mcfunction,226,39,55,#e22837
-Mercury,255,43,43,#ff2b2b
-Meson,0,120,0,#007800
-Metal,142,19,233,#8f14e9
-Mirah,199,169,56,#c7a938
-Modula-3,33,51,136,#238
+MDX,252,178,43,#fcb32c
+MLIR,94,200,219,#5ec8db
 MQL4,97,167,214,#62a8d6
 MQL5,73,117,184,#4a76b8
 MTML,182,225,244,#b7e1f4
+Macaulay2,216,255,255,#d8ffff
+Makefile,65,120,24,#427819
+Mako,126,133,141,#7e858d
+Markdown,8,62,161,#083fa1
+Marko,65,191,242,#42bff2
+Mask,249,119,50,#f97732
+Mathematical Programming System,5,47,173,#0530ad
+Max,196,167,155,#c4a79c
+MeTTa,105,89,205,#6a5acd
+Mercury,255,43,43,#ff2b2b
+Mermaid,255,53,111,#ff3670
+Meson,0,120,0,#007800
+Metal,142,19,233,#8f14e9
+MiniYAML,254,17,17,#f11
+MiniZinc,6,169,230,#06a9e6
+Mint,1,176,70,#02b046
+Mirah,199,169,56,#c7a938
+Modelica,222,29,49,#de1d31
+Modula-2,16,37,63,#10253f
+Modula-3,33,51,136,#238
+Mojo,255,76,31,#ff4c1f
+Monkey C,141,102,71,#8d6747
+MoonBit,185,35,129,#b92381
+MoonScript,255,68,132,#ff4585
+Motoko,251,176,58,#fbb03b
+Motorola 68K Assembly,0,92,170,#005daa
+Move,73,19,121,#4a137a
+Mustache,114,75,59,#724b3b
 NCL,40,67,31,#28431f
+NMODL,0,52,107,#00356b
+NPM Config,203,55,55,#cb3837
+NWScript,17,21,34,#111522
+Nasal,28,43,78,#1d2c4e
 Nearley,153,0,0,#900
 Nemerle,60,60,110,#3d3c6e
-nesC,148,175,199,#94b0c7
 NetLinx,9,160,255,#0aa0ff
 NetLinx+ERB,115,127,170,#747faa
 NetLogo,255,98,117,#ff6375
 NewLisp,135,174,215,#87aed7
 Nextflow,58,195,134,#3ac486
-Nim,55,119,91,#37775b
+Nginx,0,150,56,#009639
+Nickel,224,195,252,#e0c3fc
+Nim,255,194,0,#ffc200
 Nit,0,153,23,#009917
 Nix,126,126,255,#7e7eff
+Noir,47,31,73,#2f1f49
 Nu,201,223,64,#c9df40
-Objective-C,66,141,255,#438eff
+NumPy,156,138,249,#9c8af9
+Nunjucks,60,129,55,#3d8137
+Nushell,77,153,6,#4e9906
+OASv2-json,133,233,45,#85ea2d
+OASv2-yaml,133,233,45,#85ea2d
+OASv3-json,133,233,45,#85ea2d
+OASv3-yaml,133,233,45,#85ea2d
+OCaml,239,121,8,#ef7a08
+OMNeT++ MSG,160,224,160,#a0e0a0
+OMNeT++ NED,7,95,124,#08607c
+ObjectScript,65,71,147,#424893
 Objective-C++,103,102,251,#6866fb
 Objective-J,254,12,89,#ff0c5a
-OCaml,58,225,50,#3be133
+Odin,96,175,254,#60affe
 Omgrofl,201,187,255,#cabbff
-ooc,176,183,126,#b0b77e
 Opal,246,237,224,#f7ede0
+Open Policy Agent,124,144,153,#7d9199
+OpenAPI Specification v2,133,233,45,#85ea2d
+OpenAPI Specification v3,133,233,45,#85ea2d
+OpenCL,237,45,44,#ed2e2d
+OpenEdge ABL,91,230,0,#5ce600
+OpenQASM,169,112,255,#aa70ff
+OpenSCAD,228,205,69,#e5cd45
+Option List,70,103,49,#476732
+Org,119,170,153,#7a9
+OverPy,120,179,84,#78b355
+OverpassQL,204,225,170,#cce2aa
 Oxygene,205,208,227,#cdd0e3
 Oz,249,182,56,#fab738
 P4,112,85,181,#7055b5
+PDDL,12,0,255,#0d00ff
+PEG.js,35,76,107,#234d6b
+PLSQL,218,216,216,#dad8d8
+PLpgSQL,50,103,144,#336790
+POV-Ray SDL,106,171,101,#6bac65
+Pact,247,167,184,#f7a8b8
 Pan,204,0,0,#c00
 Papyrus,101,0,204,#60c
 Parrot,243,202,9,#f3ca0a
 Pascal,226,241,113,#e3f171
 Pawn,219,178,132,#dbb284
 Pep8,199,110,90,#c76f5b
-Perl,1,151,195,#0298c3
-Perl 6,0,0,251,#0000fb
-PHP,79,93,149,#4f5d95
+PicoLisp,96,103,175,#6067af
 PigLatin,251,215,222,#fcd7de
 Pike,0,83,144,#005390
-PLSQL,218,216,216,#dad8d8
+Pip Requirements,255,210,66,#ffd343
+Pkl,106,149,67,#6b9543
+PlantUML,251,189,22,#fbbd16
 PogoScript,216,0,115,#d80074
+Polar,174,129,255,#ae81ff
+Portugol,248,189,0,#f8bd00
+PostCSS,220,57,11,#dc3a0c
 PostScript,218,41,27,#da291c
+Power Query,210,141,13,#d38e0d
 PowerBuilder,143,15,140,#8f0f8d
-PowerShell,0,35,86,#012456
+Praat,200,80,108,#c8506d
+Prisma,12,52,75,#0c344b
+Pro*C,187,131,104,#bb8368
 Processing,0,149,216,#0096d8
+Procfile,58,46,99,#3b2f63
 Prolog,116,40,59,#74283c
+Promela,222,0,0,#de0000
 Propeller Spin,127,162,166,#7fa2a7
+Pug,168,99,84,#a86454
 Puppet,47,43,109,#302b6d
 PureBasic,89,105,134,#5a6986
 PureScript,29,34,45,#1d222d
-Python,53,114,165,#3572a5
-q,0,63,205,#0040cd
+Pyret,238,30,16,#ee1e10
+Python console,53,114,165,#3572a5
+Python traceback,53,114,165,#3572a5
+Q#,254,213,88,#fed659
 QML,67,165,27,#44a51c
+Qt Script,0,184,65,#00b841
 Quake,136,33,51,#823
+QuakeC,151,87,118,#975777
+QuickBASIC,0,127,128,#008080
+Quint,157,107,229,#9d6ce5
 R,25,139,230,#198ce7
+RAML,118,216,251,#77d9fb
+RAScript,44,151,249,#2c97fa
+RBS,112,21,22,#701516
+RDoc,112,21,22,#701516
+REXX,217,13,8,#d90e09
+RMarkdown,25,139,230,#198ce7
+RON,166,44,0,#a62c00
+ROS Interface,34,49,77,#22314e
+RPGLE,43,222,32,#2bde21
+RUNOFF,102,89,78,#665a4e
 Racket,60,91,169,#3c5caa
 Ragel,157,82,0,#9d5200
-RAML,118,216,251,#77d9fb
+Raku,0,0,251,#0000fb
 Rascal,255,249,160,#fffaa0
+ReScript,237,79,80,#ed5051
+Reason,255,88,70,#ff5847
+ReasonLIGO,255,88,70,#ff5847
 Rebol,53,138,91,#358a5b
+Record Jar,6,114,186,#0673ba
 Red,245,0,0,#f50000
+Redscript,244,67,53,#f44336
+Regular Expression,0,154,0,#009a00
 Ren'Py,255,127,127,#ff7f7f
+Rez,255,218,179,#ffdab3
 Ring,45,84,203,#2d54cb
+Riot,167,30,73,#a71e49
+RobotFramework,0,192,181,#00c0b5
+Roc,123,56,245,#7c38f5
+Rocq Prover,208,181,140,#d0b68c
 Roff,236,222,190,#ecdebe
+Roff Manpage,236,222,190,#ecdebe
 Rouge,204,0,135,#c08
-Ruby,112,21,22,#701516
-RUNOFF,102,89,78,#665a4e
-Rust,222,164,131,#dea584
-SaltStack,100,100,100,#646464
+RouterOS Script,222,57,64,#de3941
 SAS,179,73,54,#b34936
-Scala,194,45,64,#c22d40
+SCSS,198,82,139,#c6538c
+SPARQL,11,68,151,#0c4597
+SQF,63,63,63,#3f3f3f
+SQL,227,140,0,#e38c00
+SQLPL,227,140,0,#e38c00
+SRecode Template,51,138,52,#348a34
+STL,55,59,94,#373b5e
+SVG,255,152,0,#f90
+Sail,37,156,213,#259dd5
+SaltStack,100,100,100,#646464
+Sass,165,58,111,#a53b70
+Scaml,188,24,25,#bd181a
+Scenic,253,198,0,#fdc700
 Scheme,30,73,236,#1e4aec
-sed,100,185,112,#64b970
+Scilab,202,15,32,#ca0f21
 Self,5,121,170,#0579aa
-Shell,136,223,81,#89e051
+ShaderLab,33,43,55,#222c37
+ShellCheck Config,206,207,203,#cecfcb
 Shen,18,15,20,#120f14
+Simple File Verification,201,191,237,#c9bfed
+Singularity,100,230,173,#64e6ad
+Slang,31,190,201,#1fbec9
 Slash,0,125,255,#007eff
 Slice,0,62,162,#003fa2
+Slim,43,43,43,#2b2b2b
+Slint,35,120,244,#2379f4
+SmPL,201,73,73,#c94949
 Smalltalk,88,103,6,#596706
+Smarty,240,192,64,#f0c040
+Smithy,196,68,54,#c44536
+Snakemake,65,145,120,#419179
 Solidity,170,102,70,#aa6746
-SourcePawn,92,118,16,#5c7611
-SQF,63,63,63,#3f3f3f
+SourcePawn,246,157,28,#f69e1d
+SpiceDB Schema,165,48,137,#a5318a
 Squirrel,128,0,0,#800000
-SRecode Template,51,138,52,#348a34
 Stan,178,0,28,#b2011d
 Standard ML,220,85,108,#dc566d
+Starlark,118,210,116,#76d275
+Stata,25,94,145,#1a5f91
+StringTemplate,63,179,79,#3fb34f
+Stylus,255,98,70,#ff6347
+SubRip Text,158,0,0,#9e0101
+SugarSS,47,204,159,#2fcc9f
 SuperCollider,70,57,11,#46390b
-Swift,255,171,68,#ffac45
+SurrealQL,255,0,159,#ff00a0
+Survex data,255,204,153,#fc9
+Svelte,255,61,0,#ff3e00
+Sway,0,245,139,#00f58c
+Sweave,25,139,230,#198ce7
 SystemVerilog,218,225,194,#dae1c2
-Tcl,228,204,152,#e4cc98
-Terra,0,0,76,#00004c
-TeX,60,97,23,#3d6117
 TI Program,159,170,135,#a0aa87
+TL-Verilog,196,0,35,#c40023
+TLA,74,0,121,#4b0079
+TMDL,240,201,18,#f0c913
+TOML,156,65,32,#9c4221
+TSQL,227,140,0,#e38c00
+TSV,35,115,70,#237346
+TSX,48,120,198,#3178c6
+TXL,0,120,184,#0178b8
+Tact,71,181,255,#48b5ff
+Talon,51,51,51,#333
+Tcl,228,204,152,#e4cc98
+TeX,60,97,23,#3d6117
+Teal,0,176,188,#00b1bc
+Terra,0,0,76,#00004c
+Terraform Template,122,66,187,#7b42bb
+TextGrid,200,80,108,#c8506d
+TextMate Properties,222,102,228,#df66e4
+Textile,255,231,172,#ffe7ac
+Thrift,209,32,38,#d12127
+Toit,194,201,251,#c2c9fb
+Tor Config,88,49,107,#59316b
+Tree-sitter Query,142,166,75,#8ea64c
 Turing,206,20,42,#cf142b
-TypeScript,43,116,136,#2b7489
+Twig,192,208,38,#c1d026
+TypeSpec,74,53,101,#4a3665
+Typst,34,157,173,#239dad
+Unified Parallel C,78,54,23,#4e3617
+Unity3D Asset,33,43,55,#222c37
+Uno,153,50,204,#93c
 UnrealScript,165,75,76,#a54c4d
-Vala,250,228,205,#fbe5cd
+Untyped Plutus Core,54,173,189,#36adbd
+UrWeb,204,204,238,#cce
+V,79,134,196,#4f87c4
+VBA,133,125,177,#867db1
+VBScript,21,219,220,#15dcdc
 VCL,20,138,168,#148aa8
-Verilog,177,183,248,#b2b7f8
 VHDL,173,178,203,#adb2cb
-Vim script,24,159,75,#199f4b
-Visual Basic,148,92,183,#945db7
+Vala,165,109,226,#a56de2
+Valve Data Format,242,96,36,#f26025
+Velocity Template Language,80,124,254,#507cff
+Vento,255,0,127,#ff0080
+Verilog,177,183,248,#b2b7f8
+Vim Help File,24,159,75,#199f4b
+Vim Script,24,159,75,#199f4b
+Vim Snippet,24,159,75,#199f4b
+Visual Basic .NET,148,92,183,#945db7
+Visual Basic 6.0,44,99,83,#2c6353
 Volt,31,31,31,#1f1f1f
-Vue,44,61,80,#2c3e50
-wdl,66,241,244,#42f1f4
+Vue,65,184,131,#41b883
+Vyper,159,76,242,#9f4cf2
+WDL,66,241,244,#42f1f4
+WGSL,25,94,154,#1a5e9a
+Web Ontology Language,91,112,189,#5b70bd
 WebAssembly,4,19,59,#04133b
-wisp,116,129,209,#7582d1
+WebAssembly Interface Type,97,80,231,#6250e7
+Whiley,212,194,151,#d5c397
+Wikitext,252,87,87,#fc5757
+Windows Registry Entries,82,212,254,#52d5ff
+Witcher Script,255,0,0,#f00
+Wolfram Language,221,17,0,#d10
 Wollok,162,55,56,#a23738
+World of Warcraft Addon Data,247,228,63,#f7e43f
+Wren,56,56,56,#383838
 X10,75,107,239,#4b6bef
-xBase,64,57,64,#403a40
 XC,152,218,7,#99da07
+XML,0,95,172,#0060ac
+XML Property List,0,95,172,#0060ac
 XQuery,82,49,231,#5232e7
 XSLT,235,140,235,#eb8ceb
-Yacc,75,108,75,#4b6c4b
+Xmake,34,159,120,#22a079
+Xojo,128,189,65,#81bd41
+Xonsh,40,93,239,#285eef
+Xtend,36,37,93,#24255d
+YAML,203,23,29,#cb171e
 YARA,34,0,0,#200
 YASnippet,49,171,144,#32ab90
+Yacc,75,108,75,#4b6c4b
+Yul,121,73,49,#794932
 ZAP,12,102,93,#0d665e
+ZIL,219,116,229,#dc75e5
 ZenScript,0,188,209,#00bcd1
 Zephir,16,142,158,#118f9e
 Zig,236,144,91,#ec915c
-ZIL,219,116,229,#dc75e5
+Zimpl,213,119,17,#d67711
+Zmodel,255,112,0,#ff7100
+crontab,233,215,172,#ead7ac
+eC,145,56,96,#913960
+fish,73,174,71,#4aae47
+hoon,0,177,112,#00b171
+iCalendar,236,86,76,#ec564c
+jq,199,37,78,#c7254e
+kvlang,29,166,224,#1da6e0
+mIRC Script,61,86,195,#3d57c3
+mcfunction,226,39,55,#e22837
+mdsvex,95,158,160,#5f9ea0
+mupad,36,73,99,#244963
+nanorc,44,0,77,#2d004d
+nesC,148,175,199,#94b0c7
+ooc,176,183,126,#b0b77e
+pkg-config,43,93,130,#2b5e82
+q,0,63,205,#0040cd
+reStructuredText,20,20,20,#141414
+sed,100,185,112,#64b970
+templ,102,207,220,#66d0dd
+vCard,238,37,70,#ee2647
+wisp,116,129,209,#7582d1
+xBase,64,57,64,#403a40
