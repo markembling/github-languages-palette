@@ -6,15 +6,46 @@ on:
     - cron: "30 6 * * *"
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: update-palettes
   cancel-in-progress: false
 
 jobs:
-  update-palettes:
+  check-for-update:
     runs-on: ubuntu-latest
+    outputs:
+      new_version: ${{ steps.compare.outputs.new_version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+
+      - name: Compare latest release against committed version
+        id: compare
+        run: |
+          latest=$(python scripts/resolve_release_url.py github-linguist/linguist)
+          latest="${latest#ref=}"
+          current=$(cat palettes/UPSTREAM_VERSION 2>/dev/null || echo "")
+          echo "Latest release: $latest"
+          echo "Currently committed: $current"
+          if [ "$latest" = "$current" ]; then
+            echo "new_version=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "new_version=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  update-palettes:
+    needs: check-for-update
+    if: needs.check-for-update.outputs.new_version == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7

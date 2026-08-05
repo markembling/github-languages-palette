@@ -48,7 +48,7 @@ def path_exists(repo: str, ref: str, path: str) -> bool:
 def run(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("repo", help="owner/repo, e.g. github-linguist/linguist")
-    parser.add_argument("paths", nargs="+", help="one or more paths within the repo")
+    parser.add_argument("paths", nargs="*", help="paths within the repo to validate and build URLs for (omit to only resolve the ref)")
     parser.add_argument("--branch", help="resolve against this branch's HEAD, instead of the latest release")
     args = parser.parse_args(argv)
 
@@ -58,6 +58,10 @@ def run(argv: list[str] | None = None) -> int:
         kind = f"branch {args.branch!r}" if args.branch else "latest release"
         print(f"error: could not resolve {kind} for {args.repo}: {e}", file=sys.stderr)
         return 1
+    print(f"ref={ref}")
+
+    if not args.paths:
+        return 0
 
     try:
         missing = [path for path in args.paths if not path_exists(args.repo, ref, path)]
@@ -70,7 +74,6 @@ def run(argv: list[str] | None = None) -> int:
             print(f"error: {path!r} does not exist in {args.repo} at {ref}", file=sys.stderr)
         return 1
 
-    print(f"ref={ref}")
     for path in args.paths:
         print(build_raw_url(args.repo, ref, path))
     return 0
