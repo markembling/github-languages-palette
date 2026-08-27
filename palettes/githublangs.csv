@@ -1,6 +1,6 @@
 Language,R,G,B,Hex
 C,85,85,85,#555
-C#,23,134,0,#178600
+C#,114,85,220,#7355dd
 C++,243,74,124,#f34b7d
 CoffeeScript,36,70,118,#244776
 CSS,102,50,153,#639
@@ -45,6 +45,7 @@ Adblock Filter List,128,0,0,#800000
 Adobe Font Metrics,250,15,0,#fa0f00
 Agda,48,86,101,#315665
 Aiken,99,15,247,#640ff8
+Aleo,20,75,249,#154bf9
 Alloy,100,200,0,#64c800
 Alpine Abuild,12,88,127,#0d597f
 Altium Designer,168,150,98,#a89663
@@ -67,10 +68,13 @@ AutoHotkey,101,147,185,#6594b9
 AutoIt,28,53,82,#1c3552
 Avro IDL,0,64,255,#0040ff
 Awk,195,14,154,#c30e9b
+B,218,118,102,#da7666
 B (Formal Method),137,168,197,#8aa8c5
 B4X,0,228,255,#00e4ff
 BAML,168,84,247,#a855f7
 BASIC,255,0,0,#f00
+BBCode,201,255,65,#caff42
+BIRD2,181,214,228,#b6d7e4
 BQN,43,112,103,#2b7067
 Ballerina,255,79,0,#ff5000
 Batchfile,192,240,46,#c1f12e
@@ -84,6 +88,7 @@ BitBake,0,187,228,#00bce4
 Blade,247,82,63,#f7523f
 BlitzBasic,0,255,173,#00ffae
 BlitzMax,205,100,0,#cd6400
+Blueprint,53,131,228,#3584e4
 Bluespec,18,34,60,#12223c
 Bluespec BH,18,34,60,#12223c
 Boo,212,190,193,#d4bec1
@@ -183,6 +188,7 @@ F*,87,46,47,#572e30
 FIGlet Font,255,220,187,#fdb
 FIRRTL,46,99,47,#2f632f
 FLUX,135,203,255,#8cf
+FPP,211,114,39,#d37327
 Factor,98,103,70,#636746
 Fancy,123,156,179,#7b9db4
 Fantom,20,37,60,#14253c
@@ -228,6 +234,7 @@ Gleam,255,175,243,#ffaff3
 Glimmer JS,245,130,95,#f5835f
 Glimmer TS,48,120,198,#3178c6
 Glyph,193,172,127,#c1ac7f
+Gno,34,108,86,#226c57
 Gnuplot,240,169,240,#f0a9f0
 Go Checksums,0,172,216,#00add8
 Go Module,0,172,216,#00add8
@@ -275,6 +282,7 @@ INI,209,219,224,#d1dbe0
 ISPC,45,104,177,#2d68b1
 Idris,179,0,0,#b30000
 Ignore List,0,0,0,#000
+ImHex Pattern Language,58,106,224,#3a6be0
 ImageJ Macro,153,169,255,#9af
 Imba,22,206,198,#16cec6
 Inno Setup,38,74,153,#264b99
@@ -284,6 +292,7 @@ Isabelle,254,253,0,#fefe00
 Isabelle ROOT,254,253,0,#fefe00
 J,158,236,255,#9eedff
 JAR Manifest,176,113,24,#b07219
+JASS,255,2,2,#ff0303
 JCL,217,13,8,#d90e09
 JFlex,219,201,0,#dbca00
 JSON,41,41,41,#292929
@@ -344,6 +353,7 @@ Literate CoffeeScript,36,70,118,#244776
 Literate Haskell,94,80,134,#5e5086
 LiveCode Script,11,91,165,#0c5ba5
 LiveScript,73,152,134,#499886
+Lobster,249,84,40,#f95428
 Logtalk,40,91,154,#295b9a
 LookML,100,43,129,#652b81
 Lua,0,0,128,#000080
@@ -369,6 +379,7 @@ Mercury,255,43,43,#ff2b2b
 Mermaid,255,53,111,#ff3670
 Meson,0,120,0,#007800
 Metal,142,19,233,#8f14e9
+MiniScript,75,74,85,#4b4a56
 MiniYAML,254,17,17,#f11
 MiniZinc,6,169,230,#06a9e6
 Mint,1,176,70,#02b046
@@ -478,6 +489,7 @@ QML,67,165,27,#44a51c
 Qt Script,0,184,65,#00b841
 Quake,136,33,51,#823
 QuakeC,151,87,118,#975777
+Quartus Simulation IP,87,196,46,#58c42e
 QuickBASIC,0,127,128,#008080
 Quint,157,107,229,#9d6ce5
 R,25,139,230,#198ce7
@@ -505,6 +517,7 @@ Redscript,244,67,53,#f44336
 Regular Expression,0,154,0,#009a00
 Ren'Py,255,127,127,#ff7f7f
 Rez,255,218,179,#ffdab3
+Rhai,251,165,58,#fba63b
 Ring,45,84,203,#2d54cb
 Riot,167,30,73,#a71e49
 RobotFramework,0,192,181,#00c0b5
@@ -516,6 +529,7 @@ Rouge,204,0,135,#c08
 RouterOS Script,222,57,64,#de3941
 SAS,179,73,54,#b34936
 SCSS,198,82,139,#c6538c
+SIP,78,141,131,#4e8d83
 SPARQL,11,68,151,#0c4597
 SQF,63,63,63,#3f3f3f
 SQL,227,140,0,#e38c00
@@ -524,7 +538,7 @@ SRecode Template,51,138,52,#348a34
 STL,55,59,94,#373b5e
 SVG,255,152,0,#f90
 Sail,37,156,213,#259dd5
-SaltStack,100,100,100,#646464
+Salt,87,188,173,#57bcad
 Sass,165,58,111,#a53b70
 Scaml,188,24,25,#bd181a
 Scenic,253,198,0,#fdc700
@@ -586,6 +600,7 @@ TextMate Properties,222,102,228,#df66e4
 Textile,255,231,172,#ffe7ac
 Thrift,209,32,38,#d12127
 Toit,194,201,251,#c2c9fb
+Tolk,47,161,245,#30a1f5
 Tor Config,88,49,107,#59316b
 Tree-sitter Query,142,166,75,#8ea64c
 Turing,206,20,42,#cf142b
@@ -608,9 +623,11 @@ Valve Data Format,242,96,36,#f26025
 Velocity Template Language,80,124,254,#507cff
 Vento,255,0,127,#ff0080
 Verilog,177,183,248,#b2b7f8
+Verse,80,142,248,#518ef8
+Vespa Schema Definition,97,215,144,#61d790
 Vim Help File,24,159,75,#199f4b
-Vim Script,24,159,75,#199f4b
 Vim Snippet,24,159,75,#199f4b
+Vim script,24,159,75,#199f4b
 Visual Basic .NET,148,92,183,#945db7
 Visual Basic 6.0,44,99,83,#2c6353
 Volt,31,31,31,#1f1f1f
@@ -670,6 +687,7 @@ q,0,63,205,#0040cd
 reStructuredText,20,20,20,#141414
 sed,100,185,112,#64b970
 templ,102,207,220,#66d0dd
+ucode,0,183,212,#00b8d4
 vCard,238,37,70,#ee2647
 wisp,116,129,209,#7582d1
 xBase,64,57,64,#403a40

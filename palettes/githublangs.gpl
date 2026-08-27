@@ -1,7 +1,7 @@
 GIMP Palette
 # See https://github.com/markembling/github-languages-palette
  85  85  85 C
- 23 134   0 C#
+114  85 220 C#
 243  74 124 C++
  36  70 118 CoffeeScript
 102  50 153 CSS
@@ -46,6 +46,7 @@ GIMP Palette
 250  15   0 Adobe Font Metrics
  48  86 101 Agda
  99  15 247 Aiken
+ 20  75 249 Aleo
 100 200   0 Alloy
  12  88 127 Alpine Abuild
 168 150  98 Altium Designer
@@ -68,10 +69,13 @@ GIMP Palette
  28  53  82 AutoIt
   0  64 255 Avro IDL
 195  14 154 Awk
+218 118 102 B
 137 168 197 B (Formal Method)
   0 228 255 B4X
 168  84 247 BAML
 255   0   0 BASIC
+201 255  65 BBCode
+181 214 228 BIRD2
  43 112 103 BQN
 255  79   0 Ballerina
 192 240  46 Batchfile
@@ -85,6 +89,7 @@ GIMP Palette
 247  82  63 Blade
   0 255 173 BlitzBasic
 205 100   0 BlitzMax
+ 53 131 228 Blueprint
  18  34  60 Bluespec
  18  34  60 Bluespec BH
 212 190 193 Boo
@@ -184,6 +189,7 @@ GIMP Palette
 255 220 187 FIGlet Font
  46  99  47 FIRRTL
 135 203 255 FLUX
+211 114  39 FPP
  98 103  70 Factor
 123 156 179 Fancy
  20  37  60 Fantom
@@ -229,6 +235,7 @@ GIMP Palette
 245 130  95 Glimmer JS
  48 120 198 Glimmer TS
 193 172 127 Glyph
+ 34 108  86 Gno
 240 169 240 Gnuplot
   0 172 216 Go Checksums
   0 172 216 Go Module
@@ -276,6 +283,7 @@ GIMP Palette
  45 104 177 ISPC
 179   0   0 Idris
   0   0   0 Ignore List
+ 58 106 224 ImHex Pattern Language
 153 169 255 ImageJ Macro
  22 206 198 Imba
  38  74 153 Inno Setup
@@ -285,6 +293,7 @@ GIMP Palette
 254 253   0 Isabelle ROOT
 158 236 255 J
 176 113  24 JAR Manifest
+255   2   2 JASS
 217  13   8 JCL
 219 201   0 JFlex
  41  41  41 JSON
@@ -345,6 +354,7 @@ GIMP Palette
  94  80 134 Literate Haskell
  11  91 165 LiveCode Script
  73 152 134 LiveScript
+249  84  40 Lobster
  40  91 154 Logtalk
 100  43 129 LookML
   0   0 128 Lua
@@ -370,6 +380,7 @@ GIMP Palette
 255  53 111 Mermaid
   0 120   0 Meson
 142  19 233 Metal
+ 75  74  85 MiniScript
 254  17  17 MiniYAML
   6 169 230 MiniZinc
   1 176  70 Mint
@@ -479,6 +490,7 @@ GIMP Palette
   0 184  65 Qt Script
 136  33  51 Quake
 151  87 118 QuakeC
+ 87 196  46 Quartus Simulation IP
   0 127 128 QuickBASIC
 157 107 229 Quint
  25 139 230 R
@@ -506,6 +518,7 @@ GIMP Palette
   0 154   0 Regular Expression
 255 127 127 Ren'Py
 255 218 179 Rez
+251 165  58 Rhai
  45  84 203 Ring
 167  30  73 Riot
   0 192 181 RobotFramework
@@ -517,6 +530,7 @@ GIMP Palette
 222  57  64 RouterOS Script
 179  73  54 SAS
 198  82 139 SCSS
+ 78 141 131 SIP
  11  68 151 SPARQL
  63  63  63 SQF
 227 140   0 SQL
@@ -525,7 +539,7 @@ GIMP Palette
  55  59  94 STL
 255 152   0 SVG
  37 156 213 Sail
-100 100 100 SaltStack
+ 87 188 173 Salt
 165  58 111 Sass
 188  24  25 Scaml
 253 198   0 Scenic
@@ -587,6 +601,7 @@ GIMP Palette
 255 231 172 Textile
 209  32  38 Thrift
 194 201 251 Toit
+ 47 161 245 Tolk
  88  49 107 Tor Config
 142 166  75 Tree-sitter Query
 206  20  42 Turing
@@ -609,9 +624,11 @@ GIMP Palette
  80 124 254 Velocity Template Language
 255   0 127 Vento
 177 183 248 Verilog
+ 80 142 248 Verse
+ 97 215 144 Vespa Schema Definition
  24 159  75 Vim Help File
- 24 159  75 Vim Script
  24 159  75 Vim Snippet
+ 24 159  75 Vim script
 148  92 183 Visual Basic .NET
  44  99  83 Visual Basic 6.0
  31  31  31 Volt
@@ -671,6 +688,7 @@ GIMP Palette
  20  20  20 reStructuredText
 100 185 112 sed
 102 207 220 templ
+  0 183 212 ucode
 238  37  70 vCard
 116 129 209 wisp
  64  57  64 xBase

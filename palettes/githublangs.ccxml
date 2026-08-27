@@ -9,9 +9,9 @@
     </colour>
     <colour>
         <name>C#</name>
-        <r>23</r>
-        <g>134</g>
-        <b>0</b>
+        <r>114</r>
+        <g>85</g>
+        <b>220</b>
         <opacity>100</opacity>
     </colour>
     <colour>
@@ -323,6 +323,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>Aleo</name>
+        <r>20</r>
+        <g>75</g>
+        <b>249</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>Alloy</name>
         <r>100</r>
         <g>200</g>
@@ -477,6 +484,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>B</name>
+        <r>218</r>
+        <g>118</g>
+        <b>102</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>B (Formal Method)</name>
         <r>137</r>
         <g>168</g>
@@ -502,6 +516,20 @@
         <r>255</r>
         <g>0</g>
         <b>0</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
+        <name>BBCode</name>
+        <r>201</r>
+        <g>255</g>
+        <b>65</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
+        <name>BIRD2</name>
+        <r>181</r>
+        <g>214</g>
+        <b>228</b>
         <opacity>100</opacity>
     </colour>
     <colour>
@@ -593,6 +621,13 @@
         <r>205</r>
         <g>100</g>
         <b>0</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
+        <name>Blueprint</name>
+        <r>53</r>
+        <g>131</g>
+        <b>228</b>
         <opacity>100</opacity>
     </colour>
     <colour>
@@ -1289,6 +1324,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>FPP</name>
+        <r>211</r>
+        <g>114</g>
+        <b>39</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>Factor</name>
         <r>98</r>
         <g>103</g>
@@ -1601,6 +1643,13 @@
         <r>193</r>
         <g>172</g>
         <b>127</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
+        <name>Gno</name>
+        <r>34</r>
+        <g>108</g>
+        <b>86</b>
         <opacity>100</opacity>
     </colour>
     <colour>
@@ -1933,6 +1982,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>ImHex Pattern Language</name>
+        <r>58</r>
+        <g>106</g>
+        <b>224</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>ImageJ Macro</name>
         <r>153</r>
         <g>169</g>
@@ -1993,6 +2049,13 @@
         <r>176</r>
         <g>113</g>
         <b>24</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
+        <name>JASS</name>
+        <r>255</r>
+        <g>2</g>
+        <b>2</b>
         <opacity>100</opacity>
     </colour>
     <colour>
@@ -2416,6 +2479,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>Lobster</name>
+        <r>249</r>
+        <g>84</g>
+        <b>40</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>Logtalk</name>
         <r>40</r>
         <g>91</g>
@@ -2588,6 +2658,13 @@
         <r>142</r>
         <g>19</g>
         <b>233</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
+        <name>MiniScript</name>
+        <r>75</r>
+        <g>74</g>
+        <b>85</b>
         <opacity>100</opacity>
     </colour>
     <colour>
@@ -3354,6 +3431,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>Quartus Simulation IP</name>
+        <r>87</r>
+        <g>196</g>
+        <b>46</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>QuickBASIC</name>
         <r>0</r>
         <g>127</g>
@@ -3543,6 +3627,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>Rhai</name>
+        <r>251</r>
+        <g>165</g>
+        <b>58</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>Ring</name>
         <r>45</r>
         <g>84</g>
@@ -3620,6 +3711,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>SIP</name>
+        <r>78</r>
+        <g>141</g>
+        <b>131</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>SPARQL</name>
         <r>11</r>
         <g>68</g>
@@ -3676,10 +3774,10 @@
         <opacity>100</opacity>
     </colour>
     <colour>
-        <name>SaltStack</name>
-        <r>100</r>
-        <g>100</g>
-        <b>100</b>
+        <name>Salt</name>
+        <r>87</r>
+        <g>188</g>
+        <b>173</b>
         <opacity>100</opacity>
     </colour>
     <colour>
@@ -4110,6 +4208,13 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>Tolk</name>
+        <r>47</r>
+        <g>161</g>
+        <b>245</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>Tor Config</name>
         <r>88</r>
         <g>49</g>
@@ -4264,6 +4369,20 @@
         <opacity>100</opacity>
     </colour>
     <colour>
+        <name>Verse</name>
+        <r>80</r>
+        <g>142</g>
+        <b>248</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
+        <name>Vespa Schema Definition</name>
+        <r>97</r>
+        <g>215</g>
+        <b>144</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
         <name>Vim Help File</name>
         <r>24</r>
         <g>159</g>
@@ -4271,14 +4390,14 @@
         <opacity>100</opacity>
     </colour>
     <colour>
-        <name>Vim Script</name>
+        <name>Vim Snippet</name>
         <r>24</r>
         <g>159</g>
         <b>75</b>
         <opacity>100</opacity>
     </colour>
     <colour>
-        <name>Vim Snippet</name>
+        <name>Vim script</name>
         <r>24</r>
         <g>159</g>
         <b>75</b>
@@ -4695,6 +4814,13 @@
         <r>102</r>
         <g>207</g>
         <b>220</b>
+        <opacity>100</opacity>
+    </colour>
+    <colour>
+        <name>ucode</name>
+        <r>0</r>
+        <g>183</g>
+        <b>212</b>
         <opacity>100</opacity>
     </colour>
     <colour>
