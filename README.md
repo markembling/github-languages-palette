@@ -2,14 +2,14 @@
 
 This repository contains palette files in various formats containing the colours
 used for all the programming languages on GitHub, extracted directly from
-[Linguist](ghl).
+[Linguist][ghl].
 
 It also contains a Python module which generates the palette files from the
 original Linguist source YAML.
 
 This was inspired by [doda/github-language-colors](https://github.com/doda/github-language-colors)
 but I wanted the output to be something which I could feed straight into various
-other apps (primarily my own [Colour Chooser][cc]).
+other apps (primarily my own [Palette Picker][pp]).
 
 ## Palettes
 
@@ -17,7 +17,7 @@ The palette files can be found in the [`palettes`](palettes/) directory in the
 following formats. If you're after the colours, this is what you want - just
 grab the format(s) you need and use. No need to worry about any of the rest.
 
- - [Colour Chooser][cc] palette file (`.ccxml`)
+ - [Palette Picker][pp] palette file (`.ccxml`)
  - [GIMP](https://www.gimp.org/) palette (`.gpl`)
  - Adobe Swatch Exchange file (`.ase`)
  - Adobe Photoshop Color Swatch file (`.aco`)
@@ -74,11 +74,11 @@ others. However if you don't want this, use `--no-popular-first`.
 
 The script for generating the palettes is licensed under the [MIT license](LICENSE).
 
-The actual palette of colours is part of GitHub's [Linguist](ghl) and therefore
-usage is dictated by the [license for Linguist](ghllic). To date this has also
+The actual palette of colours is part of GitHub's [Linguist][ghl] and therefore
+usage is dictated by the [license for Linguist][ghllic]. To date this has also
 been the MIT license.
 
 
 [ghl]: https://github.com/github-linguist/linguist
 [ghllic]: https://github.com/github/linguist/blob/master/LICENSE
-[cc]: https://markembling.info/2010/12/colour-chooser
+[pp]: https://markembling.info/software/palette-picker
