@@ -28,6 +28,8 @@ jobs:
 
       - name: Compare latest release against committed version
         id: compare
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           latest=$(python scripts/resolve_release_url.py github-linguist/linguist)
           latest="${latest#ref=}"
@@ -62,6 +64,8 @@ jobs:
         run: just bootstrap
 
       - name: Generate palettes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: just all-release
 
       - name: Stage and check for changes

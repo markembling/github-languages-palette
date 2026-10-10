@@ -6,16 +6,26 @@ ref.
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 
+def gh_api_headers() -> dict[str, str]:
+    """Gets headers for GitHub API requests, including an authorization token if available in the environment."""
+    headers = {"Accept": "application/vnd.github+json"}
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
 def get_latest_release_tag(repo: str) -> str:
     request = Request(
         f"https://api.github.com/repos/{repo}/releases/latest",
-        headers={"Accept": "application/vnd.github+json"},
+        headers=gh_api_headers(),
     )
     with urlopen(request) as response:
         return json.load(response)["tag_name"]
@@ -24,7 +34,7 @@ def get_latest_release_tag(repo: str) -> str:
 def get_branch_head_sha(repo: str, branch: str) -> str:
     request = Request(
         f"https://api.github.com/repos/{repo}/commits/{branch}",
-        headers={"Accept": "application/vnd.github+json"},
+        headers=gh_api_headers()
     )
     with urlopen(request) as response:
         return json.load(response)["sha"]
